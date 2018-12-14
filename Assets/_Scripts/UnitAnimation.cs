@@ -3,22 +3,20 @@ using UnityEngine.AI;
 
 public class UnitAnimation : MonoBehaviour
 {
-    [SerializeField]
     private Animator _animator;
-    [SerializeField]
     private NavMeshAgent _agent;
 
     private string IsMovingTriggerName = "IsMoving";
+
+    private void Awake()
+    {
+        _animator = GetComponentInChildren<Animator>();
+        _agent = GetComponent<NavMeshAgent>();
+    }
     void FixedUpdate()
     {
-        if (!_agent.hasPath)
-        {
-            _animator.SetBool(IsMovingTriggerName, false);
-        }
-        else
-        {
-            _animator.SetBool(IsMovingTriggerName, true);
-        }
+        /// TODO: попробывать обновлять через подписку на событие изменения значения, а не вот этот весь FixedUpdate
+        _animator.SetBool(IsMovingTriggerName, _agent.hasPath);
     } 
 }
 

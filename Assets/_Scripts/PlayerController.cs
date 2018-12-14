@@ -18,17 +18,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-    {
-        if (Input.GetMouseButtonDown(1))
-        {
-            Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, 100f, _movementMask))
-            { }
-                
-        }
-
+    {       
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
@@ -37,5 +27,14 @@ public class PlayerController : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100f, _movementMask))
                 _unitMovement.MoveToPoint(hit.point);
         }
+
+        //if (Input.GetMouseButtonDown(1))
+        //{
+        //    Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit hit;
+
+        //    if (Physics.Raycast(ray, out hit, 100f, _movementMask))
+        //    { }
+        //}
     }
 }

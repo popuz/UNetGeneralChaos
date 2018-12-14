@@ -32,6 +32,7 @@ public class CameraController : MonoBehaviour
 
     void Awake()
     {
+        _target = FindObjectOfType<PlayerController>().transform;
         _transform = transform;
     }
     void Update()
@@ -45,7 +46,6 @@ public class CameraController : MonoBehaviour
             _currentRot += Input.mousePosition.x - _prevMouseX; /// изменение угла поворота камеры
         
         _prevMouseX = Input.mousePosition.x; /// обновляем предыдущее положение мыши
-
     }
     void LateUpdate()
     {
