@@ -1,22 +1,22 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class UnitAnimation : MonoBehaviour
+public class UnitAnimation
 {
     private Animator _animator;
     private NavMeshAgent _agent;
 
     private string IsMovingTriggerName = "IsMoving";
 
-    private void Awake()
+    public void Init(Animator animator, NavMeshAgent agent)
     {
-        _animator = GetComponentInChildren<Animator>();
-        _agent = GetComponent<NavMeshAgent>();
+        _animator = animator;
+        _agent = agent;
     }
-    void FixedUpdate()
-    {
-        /// TODO: попробывать обновлять через подписку на событие изменения значения, а не вот этот весь FixedUpdate
+
+    public void Tick()
+    {        
         _animator.SetBool(IsMovingTriggerName, _agent.hasPath);
-    } 
+    }     
 }
 
