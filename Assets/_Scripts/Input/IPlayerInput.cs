@@ -9,6 +9,8 @@ public interface IPlayerInput
     event Action FireOnce;
 
     /// Properties 
+    float Horizontal { get; }
+    float Vertical { get; }
     Vector3 CursorPosition { get; }
     bool IsFiring { get; } // 0, 1  
 }

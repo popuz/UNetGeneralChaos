@@ -2,6 +2,6 @@
 
 public interface IUnitMovement 
 {
-    void Init(IPlayerInput playerInput, PlayerController playerCtrl);
+    void Init(IPlayerInput playerInput);
     void Tick();
 }

@@ -5,15 +5,15 @@ public class ClickToMoveInputScheme : IPlayerInput
 {
     public event Action FireOnce;
 
-    public Vector3 CursorPosition => Input.mousePosition;
+    private bool _fireIsReleased = false;
     public bool IsFiring { get; private set; }
 
-    private bool _fireIsReleased = false;
-
+    public Vector3 CursorPosition => Input.mousePosition;
+    public float Horizontal => 0f;
+    public float Vertical => 0f;
     public void ReadInput()
     {
         IsFiring = Input.GetAxisRaw("Fire1") != 0;
-
         HandleActionOnce(IsFiring, FireOnce, ref _fireIsReleased);
     }
 
@@ -24,7 +24,7 @@ public class ClickToMoveInputScheme : IPlayerInput
             releaseFlag = !releaseFlag;
 
             if (isActingFlag)
-                ActionOnFirstAct.Invoke();
+                ActionOnFirstAct?.Invoke();
         }
     }
 }

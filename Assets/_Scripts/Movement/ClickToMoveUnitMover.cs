@@ -5,18 +5,20 @@ public class ClickToMoveUnitMover : IUnitMovement
 {
     private IPlayerInput _input;
 
-    private NavMeshAgent _agent;
-    private Camera _cam;
+    private NavMeshAgent _agent;    
     private LayerMask _movementMask;
+    private Camera _cam;
 
-    public void Init(IPlayerInput playerInput, PlayerController playerCtrl)
+    public ClickToMoveUnitMover(NavMeshAgent agent, LayerMask movementMask, Camera cam)
+    {       
+        _agent = agent;
+        _movementMask = movementMask;
+        _cam = cam;
+    }
+    public void Init(IPlayerInput playerInput)
     {
+        Debug.Log($"Using {nameof(ClickToMoveUnitMover)}");
         _input = playerInput;
-
-        _agent = playerCtrl.GetComponent<NavMeshAgent>();
-        _movementMask = playerCtrl.MovementMask;
-        _cam = Camera.main;
-
         _input.FireOnce += NavMeshMoveToPint;        
     }
 

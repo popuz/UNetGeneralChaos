@@ -6,9 +6,9 @@ public class UnitAnimation
     private Animator _animator;
     private NavMeshAgent _agent;
 
-    private string IsMovingTriggerName = "IsMoving";
+    private readonly string IsMovingTriggerName = "IsMoving";
 
-    public void Init(Animator animator, NavMeshAgent agent)
+    public UnitAnimation(Animator animator, NavMeshAgent agent)
     {
         _animator = animator;
         _agent = agent;
