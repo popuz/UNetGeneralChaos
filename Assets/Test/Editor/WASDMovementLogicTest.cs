@@ -59,35 +59,18 @@ namespace UnityTests
 
             Assert.AreEqual(Time.fixedDeltaTime, _transform.position.x, 0.0001f);
         }
-    
-        [Test]
-        public void MovesAlongXAxis_ByHorizontalInput_WithSpeedEqual1_ForOneSecond_ChangeXPosition_ByOneWorldUnit()
+
+        [TestCase(1f, 1f, 1f)]
+        [TestCase(1f, 2f, 1f)]
+        [TestCase(1f, 1f, 5f)]        
+        public void MovesAlongXAxis_ByHorizontalInput_Speed_MoveTime(float hInput, float moveSpeed, float moveTime)
         {
-            _input.Horizontal.Returns(1f);
+            _input.Horizontal.Returns(hInput);
+            _mover.Speed = moveSpeed;
+            _mover.Tick(moveTime);
 
-            _mover.Tick(1f);
-
-            Assert.AreEqual(1f, _transform.position.x, 0.0001f);
-        }
-
-        [Test]
-        public void MovesAlongXAxis_ByHorizontalInput_WithSpeedEqual2_ForOneSecond_ChangeXPosition_ByTwoWorldUnit()
-        {
-            _input.Horizontal.Returns(1f);
-            _mover.Speed = 2f;
-            _mover.Tick(1f);
-
-            Assert.AreEqual(2f, _transform.position.x, 0.0001f);
-        }
-
-        [Test]
-        public void MovesAlongXAxis_ByHorizontalInput_WithSpeedEqual1_ForFiveSecond_ChangeXPosition_ByTwoWorldUnit()
-        {
-            _input.Horizontal.Returns(1f);            
-            _mover.Tick(5f);
-
-            Assert.AreEqual(5f, _transform.position.x, 0.0001f);
-        }
+            Assert.AreEqual(expected: hInput* moveSpeed* moveTime, _transform.position.x, 0.0001f);
+        }       
 
         [Test]
         public void MovesAlongZAxis_ByVerticalInput_WithSpeedEqual1_ChangeZPositionByFixedDeltaTimeAmount()
@@ -108,6 +91,7 @@ namespace UnityTests
 
             Assert.AreEqual(1f, _transform.position.z, 0.0001f);
         }
+       
         /// Other Possible Tests:
         // AtLeastOnePaddleIsSuccesfullyCreated
         // TwoPaddlesAreSuccesfullyCreated

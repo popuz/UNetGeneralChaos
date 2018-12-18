@@ -5,17 +5,19 @@ public class ClickToMoveUnitMover : IUnitMovement
 {
     private IPlayerInput _input;
     public bool UseTick => false;
-
-    private NavMeshAgent _agent;    
+    
     private LayerMask _movementMask;
-    private Camera _cam;    
+    private Camera _cam;
+
+    public NavMeshAgent Agent { get; set; }
 
     public ClickToMoveUnitMover(NavMeshAgent agent, LayerMask movementMask, Camera cam)
-    {       
-        _agent = agent;
+    {
+        Agent = agent;
         _movementMask = movementMask;
         _cam = cam;
     }
+
     public void Init(IPlayerInput playerInput)
     {
         Debug.Log($"Using {nameof(ClickToMoveUnitMover)} for player Movement");
@@ -29,7 +31,7 @@ public class ClickToMoveUnitMover : IUnitMovement
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, 100f, _movementMask))
-            _agent.SetDestination(hit.point);
+            Agent.SetDestination(hit.point);
     }
 
     public void Tick() { }
