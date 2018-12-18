@@ -6,33 +6,32 @@ namespace UnityTests
 {
     public class TrapTests
     {
+        Trap _trap;
+        ICharacter _character;
+
+        [SetUp]
+        public void Initialize()
+        {            
+            _trap = new Trap();
+            _character = Substitute.For<ICharacter>();            
+        }
+
         [Test]
         public void PlayerEntering_PlayerTargetedTrap_ReducesHealthByOne()
-        {
-            Trap trap = new Trap();
-            ICharacter character = Substitute.For<ICharacter>();
-            character.IsPlayer.Returns(true);
+        {            
+            _character.IsPlayer.Returns(true);
 
-            trap.HandleCharacterEnetered(character, TrapTargetType.Player);
+            _trap.HandleCharacterEnetered(_character, TrapTargetType.Player);
 
-            Assert.AreEqual(-1f, character.Health);
+            Assert.AreEqual(-1f, _character.Health);
         }
 
         [Test]
         public void NpcEntering_NpcTargetedTrap_ReducesHealthByOne()
-        {
-            Trap trap = new Trap();
-            ICharacter character = Substitute.For<ICharacter>();
+        {            
+            _trap.HandleCharacterEnetered(_character, TrapTargetType.Npc);
 
-            trap.HandleCharacterEnetered(character, TrapTargetType.Npc);
-
-            Assert.AreEqual(-1f, character.Health);
-        }
-
-        [SetUp]
-        public void ResetScene()
-        {
-            EditorSceneManager.NewScene(NewSceneSetup.EmptyScene);
+            Assert.AreEqual(-1f, _character.Health);
         }
     }
 }

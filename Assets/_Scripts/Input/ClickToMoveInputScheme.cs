@@ -11,6 +11,7 @@ public class ClickToMoveInputScheme : IPlayerInput
     public Vector3 CursorPosition => Input.mousePosition;
     public float Horizontal => 0f;
     public float Vertical => 0f;
+
     public void ReadInput()
     {
         IsFiring = Input.GetAxisRaw("Fire1") != 0;

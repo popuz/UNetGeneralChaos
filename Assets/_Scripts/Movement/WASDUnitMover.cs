@@ -3,24 +3,29 @@
 public class WASDUnitMover : IUnitMovement
 {
     private IPlayerInput _input;
+    public bool UseTick => true;
 
     private Transform _playerTransform;
-    private float _speed;
+    public float Speed { get; set; }    
 
     public WASDUnitMover(Transform playerTransform, float speed)
     {
         _playerTransform = playerTransform;
-        _speed = speed;
+        Speed = speed;
     }
 
     public void Init(IPlayerInput playerInput)
     {
-        Debug.Log($"Using {nameof(WASDUnitMover)}");
+        Debug.Log($"Using {nameof(WASDUnitMover)} for player Movement");
         _input = playerInput;        
     }
 
-    public void Tick()
-    {        
-        _playerTransform.position += new Vector3(_input.Horizontal * _speed * Time.fixedDeltaTime, 0f, _input.Vertical * _speed * Time.fixedDeltaTime);
-    }
+    public void Tick() => _playerTransform.position += new Vector3(_input.Horizontal * Speed * Time.fixedDeltaTime, 
+                                                                    0f, 
+                                                                    _input.Vertical * Speed * Time.fixedDeltaTime);
+
+
+    public void Tick(float fixedDeltaTime) => _playerTransform.position += new Vector3(_input.Horizontal * Speed * fixedDeltaTime,
+                                                                                         0f,
+                                                                                        _input.Vertical * Speed * fixedDeltaTime);
 }

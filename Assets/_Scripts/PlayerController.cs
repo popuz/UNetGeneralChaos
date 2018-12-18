@@ -3,50 +3,42 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour, ICharacter
 {
-    //private IPlayerInput _input;
-    //private IUnitMovement _unitMover;
-    public IPlayerInput InputScheme { get; set; }
-    public IUnitMovement UnitMover { get; set; }
+    public IPlayerInput InputScheme { get; set; }//private IPlayerInput _input;
+    public IUnitMovement UnitMover { get; set; }//private IUnitMovement _unitMover;
 
     [SerializeField, Tooltip("слой взаимодействия перемещения")]
     private LayerMask _movementMask;
     public LayerMask MovementMask => _movementMask;
+    public float MoveSpeed { get; set; } = 5f;
 
     public UnitAnimation AnimCtrl { get; set; }
 
-    #region For Unit-tests
     [SerializeField]
     private bool _isPlayer;
     public bool IsPlayer => _isPlayer;
 
     public int Health { get; set; }
-    public float Speed { get; set; }
-    #endregion
-
+    
     void Awake()
-    {
+    {                
         var navAgentTmp = GetComponent<NavMeshAgent>();
 
-        InputScheme = new WASDInputScheme();//ClickToMoveInputScheme();//WASDInputScheme();
-        UnitMover = new WASDUnitMover(transform, Speed);//new ClickToMoveUnitMover(navAgentTmp, _movementMask, Camera.main);//WASDUnitMover(transform, 5f);
+        InputScheme = new ClickToMoveInputScheme();//ClickToMoveInputScheme();//WASDInputScheme();
+        UnitMover = new ClickToMoveUnitMover(navAgentTmp, _movementMask, Camera.main);//new ClickToMoveUnitMover(navAgentTmp, _movementMask, Camera.main);//new WASDUnitMover(transform, MoveSpeed);
 
         if (navAgentTmp != null)
             AnimCtrl = new UnitAnimation(GetComponentInChildren<Animator>(), navAgentTmp);        
     }
 
-    void Start()
-    {
-        UnitMover?.Init(InputScheme);
-    }
+    void Start() => UnitMover?.Init(InputScheme);    
+    
+    void Update() => InputScheme?.ReadInput();    
 
-    private void Update()
+    void FixedUpdate()
     {
-        InputScheme?.ReadInput();
-    }
+        if(UnitMover.UseTick)
+            UnitMover.Tick(Time.fixedDeltaTime);
 
-    private void FixedUpdate()
-    {
-        UnitMover?.Tick();
         AnimCtrl?.Tick();
     }
 }

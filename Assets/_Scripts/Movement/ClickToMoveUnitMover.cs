@@ -4,10 +4,11 @@ using UnityEngine.AI;
 public class ClickToMoveUnitMover : IUnitMovement
 {
     private IPlayerInput _input;
+    public bool UseTick => false;
 
     private NavMeshAgent _agent;    
     private LayerMask _movementMask;
-    private Camera _cam;
+    private Camera _cam;    
 
     public ClickToMoveUnitMover(NavMeshAgent agent, LayerMask movementMask, Camera cam)
     {       
@@ -17,7 +18,7 @@ public class ClickToMoveUnitMover : IUnitMovement
     }
     public void Init(IPlayerInput playerInput)
     {
-        Debug.Log($"Using {nameof(ClickToMoveUnitMover)}");
+        Debug.Log($"Using {nameof(ClickToMoveUnitMover)} for player Movement");
         _input = playerInput;
         _input.FireOnce += NavMeshMoveToPint;        
     }
@@ -32,4 +33,5 @@ public class ClickToMoveUnitMover : IUnitMovement
     }
 
     public void Tick() { }
+    public void Tick(float fixedDeltaTime) { }
 }

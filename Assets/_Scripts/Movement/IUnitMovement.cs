@@ -1,7 +1,9 @@
-﻿using UnityEngine;
-
+﻿
 public interface IUnitMovement 
 {
-    void Init(IPlayerInput playerInput);
-    void Tick();
+    bool UseTick { get; }
+
+    void Init(IPlayerInput playerInput);    
+    void Tick();    
+    void Tick(float fixedDeltaTime);
 }

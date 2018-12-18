@@ -14,9 +14,6 @@ public class UnitAnimation
         _agent = agent;
     }
 
-    public void Tick()
-    {        
-        _animator.SetBool(IsMovingTriggerName, _agent.hasPath);
-    }     
+    public void Tick() => _animator.SetBool(IsMovingTriggerName, _agent.hasPath);    
 }
 
