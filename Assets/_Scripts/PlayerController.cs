@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour, ICharacter
     public LayerMask MovementMask => _movementMask;
     public float MoveSpeed { get; set; } = 5f;
 
+    [SerializeField, Tooltip("аниматор модели")]
+    private Animator _targetAnimator;
     public UnitAnimation AnimCtrl { get; set; }
 
     [SerializeField]
@@ -20,17 +22,21 @@ public class PlayerController : MonoBehaviour, ICharacter
     public int Health { get; set; }
     
     void Awake()
-    {                
+    {
         var navAgentTmp = GetComponent<NavMeshAgent>();
-
+            
         InputScheme = new ClickToMoveInputScheme();//ClickToMoveInputScheme();//WASDInputScheme();
-        UnitMover = new ClickToMoveUnitMover(navAgentTmp, _movementMask, Camera.main);//new ClickToMoveUnitMover(navAgentTmp, _movementMask, Camera.main);//new WASDUnitMover(transform, MoveSpeed);
-
+        UnitMover = new NavMeshUnitMover(navAgentTmp, _movementMask, Camera.main);//new ClickToMoveUnitMover(navAgentTmp, _movementMask, Camera.main);//new WASDUnitMover(transform, MoveSpeed);
+        
         if (navAgentTmp != null)
-            AnimCtrl = new UnitAnimation(GetComponentInChildren<Animator>(), navAgentTmp);        
+            AnimCtrl = new UnitAnimation(_targetAnimator ?? GetComponentInChildren<Animator>(), navAgentTmp);        
     }
 
-    void Start() => UnitMover?.Init(InputScheme);    
+    void Start()
+    {        
+        Camera.main.GetComponent<CameraController>().Target = transform;
+        UnitMover?.Init(InputScheme);
+    }
     
     void Update() => InputScheme?.ReadInput();    
 

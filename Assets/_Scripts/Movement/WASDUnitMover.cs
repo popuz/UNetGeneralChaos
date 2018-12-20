@@ -20,12 +20,16 @@ public class WASDUnitMover : IUnitMovement
         _input = playerInput;        
     }
 
-    public void Tick() => _playerTransform.position += new Vector3(_input.Horizontal * Speed * Time.fixedDeltaTime, 
-                                                                    0f, 
-                                                                    _input.Vertical * Speed * Time.fixedDeltaTime);
+    public void Tick() => HandleMovement(Time.fixedDeltaTime);  
+
+    public void Tick(float fixedDeltaTime) => HandleMovement(fixedDeltaTime);
 
 
-    public void Tick(float fixedDeltaTime) => _playerTransform.position += new Vector3(_input.Horizontal * Speed * fixedDeltaTime,
-                                                                                         0f,
-                                                                                        _input.Vertical * Speed * fixedDeltaTime);
+    private void HandleMovement(float fixedDeltaTime)
+    {
+        _playerTransform.position += new Vector3(_input.Horizontal * Speed * fixedDeltaTime,
+                                                 0f,
+                                                 _input.Vertical * Speed * fixedDeltaTime);
+    }
+    
 }

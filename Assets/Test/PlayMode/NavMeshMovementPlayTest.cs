@@ -9,8 +9,7 @@ namespace UnityTests
 {
     public class NavMeshMovementPlayTest
     {
-        string SceneName = "Level 1",
-               NavMeshTest = "TestNavMesh";
+        string SceneName = "TestNavMesh";
 
         Scene testScene;
 
@@ -30,15 +29,18 @@ namespace UnityTests
         }
 
         [UnityTest]
-        public IEnumerator AtLeast_OnePlayer_IsCreated()
+        public IEnumerator AtLeast_OnePlayer_CanBeCreated()
         {            
             var player = GameObject.FindObjectOfType<PlayerController>();
+            //GameObject player = Resources.Load("Prefabs/Player") as GameObject;
+            //player.transform.position = new Vector3(0f, 2f, 0f);
+
             Assert.IsNotNull(player);
             yield return null;            
         }
 
         [UnityTest]
-        public IEnumerator CanTakeRandomPointOnNavMesh()
+        public IEnumerator RandomPointOnNavMesh_NotEqualZero()
         {
             yield return null;
             NavMeshTriangulation navMeshData = NavMesh.CalculateTriangulation();
@@ -54,12 +56,8 @@ namespace UnityTests
         }
 
         [UnityTest]
-        public IEnumerator NavMeshMover_PlayerReachesRandomNavMeshPoint()
-        {
-
-            yield return SceneManager.LoadSceneAsync(NavMeshTest, LoadSceneMode.Additive);
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName(NavMeshTest));
-
+        public IEnumerator ClickToMoveUnithMover_PlayerCanReachesRandomNavMeshPoint()
+        {          
             NavMeshTriangulation navMeshData = NavMesh.CalculateTriangulation();
             // Pick the first indice of a random triangle in the nav mesh
             int t = Random.Range(0, navMeshData.indices.Length - 3);
@@ -68,14 +66,18 @@ namespace UnityTests
             point = Vector3.Lerp(point, navMeshData.vertices[navMeshData.indices[t + 2]], Random.value);
 
             var player = GameObject.FindObjectOfType<PlayerController>();
-            (player.UnitMover as ClickToMoveUnitMover).Agent.SetDestination(point);
+            (player.UnitMover as NavMeshUnitMover).Agent.SetDestination(point);
 
-            Time.timeScale = 1.0f; /// Increase the timeScale so the test executes quickly
-            yield return new WaitForSeconds(5f);
+            //GameObject player = Resources.Load("Prefabs/Player") as GameObject;
+            //player.transform.position = new Vector3(0f, 2f, 0f);
+                        
+            Time.timeScale = 40.0f; /// Increase the timeScale so the test executes quickly
+            yield return new WaitForSeconds(0.1f* Time.timeScale);
             
-            Assert.AreEqual(point.x, player.transform.position.z);
+            Assert.AreEqual(point.x, player.transform.position.x);
+            Assert.AreEqual(point.z, player.transform.position.z);
 
-            Time.timeScale = 1.0f;
+            Time.timeScale = 1.0f;            
         }
 
         [UnityTearDown]
