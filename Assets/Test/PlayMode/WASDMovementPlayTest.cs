@@ -4,7 +4,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace UnityTests
+namespace UNetGeneralChaos.IntegratedTests
 {
     public class WASDMovementPlayTest     
     {        
@@ -37,9 +37,8 @@ namespace UnityTests
         public void AfterEveryTest()
         {
             Time.timeScale = 1.0f;/// Reset timeScale
-
-            //foreach (var go in GameObject.FindObjectsOfType<PlayerController>())
-            //    Object.Destroy(go);
+            /// If you create some Components, then clean them up
+            //foreach (var go in GameObject.FindObjectsOfType<PlayerController>())   Object.Destroy(go);            
         }
     }
 }

@@ -3,7 +3,7 @@
 public class CameraController : MonoBehaviour
 {
     [SerializeField, Tooltip("отступ камеры от игрока")]
-    private Vector3 _offset;    
+    private Vector3 _offset;
     [SerializeField, Tooltip("регулировка чувствительности колесика мыши")]
     private float _zoomSpeed = 4f;
     [SerializeField, Tooltip("ограничение приближения камеры")]
@@ -18,27 +18,27 @@ public class CameraController : MonoBehaviour
 
     public Transform Target { get; set; }
 
-    void Awake() => _transform = transform;    
+    void Awake() => _transform = transform;
 
     void Update()
     {
-        if (Target == null) return;            
+        if (Target == null) return;
 
         _currentZoom -= Input.GetAxis("Mouse ScrollWheel") * _zoomSpeed; /// изменение зума        
         _currentZoom = Mathf.Clamp(_currentZoom, _zoomClamp.x, _zoomClamp.y);/// ограничение зума
 
-        if (Input.GetMouseButton(2))            
+        if (Input.GetMouseButton(2))
             _currentRot += Input.mousePosition.x - _prevMouseX; /// изменение угла поворота камеры
-        
+
         _prevMouseX = Input.mousePosition.x; /// обновляем предыдущее положение мыши
     }
 
     void LateUpdate()
     {
-        if (Target == null) return;        
-        _transform.position = Target.position - _offset*_currentZoom;            
+        if (Target == null) return;
+        _transform.position = Target.position - _offset * _currentZoom;
         _transform.LookAt(Target.position + Vector3.up * _pitch); /// поворот камеры на игрока                               
         _transform.RotateAround(Target.position, Vector3.up, _currentRot);/// применение дополнительного вращения
     }
-
 }
+

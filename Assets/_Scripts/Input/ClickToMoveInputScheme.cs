@@ -1,31 +1,34 @@
 ﻿using System;
 using UnityEngine;
 
-public class ClickToMoveInputScheme : IPlayerInput
+namespace UNetGeneralChaos
 {
-    public event Action FireOnce;
-
-    private bool _fireIsReleased = false;
-    public bool IsFiring { get; private set; }
-
-    public Vector3 CursorPosition => Input.mousePosition;
-    public float Horizontal => 0f;
-    public float Vertical => 0f;
-
-    public void ReadInput()
+    public class ClickToMoveInputScheme : IPlayerInput
     {
-        IsFiring = Input.GetAxisRaw("Fire1") != 0;
-        HandleActionOnce(IsFiring, FireOnce, ref _fireIsReleased);
-    }
+        public event Action FireOnce;
 
-    private void HandleActionOnce(bool isActingFlag, Action ActionOnFirstAct, ref bool releaseFlag)
-    {
-        if (releaseFlag == isActingFlag)
+        private bool _fireIsReleased = false;
+        public bool IsFiring { get; private set; }
+
+        public Vector3 CursorPosition => Input.mousePosition;
+        public float Horizontal => 0f;
+        public float Vertical => 0f;
+
+        public void ReadInput()
         {
-            releaseFlag = !releaseFlag;
+            IsFiring = Input.GetAxisRaw("Fire1") != 0;
+            HandleActionOnce(IsFiring, FireOnce, ref _fireIsReleased);
+        }
 
-            if (isActingFlag)
-                ActionOnFirstAct?.Invoke();
+        private void HandleActionOnce(bool isActingFlag, Action ActionOnFirstAct, ref bool releaseFlag)
+        {
+            if (releaseFlag == isActingFlag)
+            {
+                releaseFlag = !releaseFlag;
+
+                if (isActingFlag)
+                    ActionOnFirstAct?.Invoke();
+            }
         }
     }
 }

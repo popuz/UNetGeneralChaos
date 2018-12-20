@@ -3,7 +3,7 @@ using NUnit.Framework;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace UnityTests
+namespace UNetGeneralChaos.UnitTests
 {
     public class WASDMovementLogicTest
     {
@@ -35,6 +35,7 @@ namespace UnityTests
             _mover.Tick();
 
             Assert.AreEqual(Vector3.zero, _transform.position);
+            /// If we would like sertain precision then use this instead
             //Assert.AreEqual(expected: 1, _transform.position.x, delta: 0.01f);
             //Assert.AreEqual(expected: 1, _transform.position.y, delta: 0.01f);
             //Assert.AreEqual(expected: 1, _transform.position.z, delta: 0.01f);
@@ -82,20 +83,16 @@ namespace UnityTests
             Assert.AreEqual(Time.fixedDeltaTime, _transform.position.z, 0.0001f);
         }
 
-        [Test]
-        public void MovesAlongZAxis_ByVerticalInput_WithSpeedEqual1_ForOneSecond_ChangeZPosition_ByOneWorldUnit()
-        {
-            _input.Vertical.Returns(1f);
+        [TestCase(1f, 1f, 1f)]
+        [TestCase(1f, 2f, 1f)]
+        [TestCase(1f, 1f, 5f)]
+        public void MovesAlongZAxis_ByVerticalInput_Speed_MoveTime(float vInput, float moveSpeed, float moveTime)
+        {            
+            _input.Vertical.Returns(vInput);
+            _mover.Speed = moveSpeed;
+            _mover.Tick(moveTime);
 
-            _mover.Tick(1f);
-
-            Assert.AreEqual(1f, _transform.position.z, 0.0001f);
-        }
-       
-        /// Other Possible Tests:
-        // AtLeastOnePaddleIsSuccesfullyCreated
-        // TwoPaddlesAreSuccesfullyCreated
-        // If_Left_Direction_Was_Provided_Then_Transform_Moves_Up
-        // If_Speed_Is_Set_To_2_Then_Transform_Moves_2_World_Units
+            Assert.AreEqual(expected: vInput * moveSpeed * moveTime, _transform.position.z, 0.0001f);
+        }             
     }
 }

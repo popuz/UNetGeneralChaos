@@ -1,8 +1,8 @@
 ﻿using NSubstitute;
 using NUnit.Framework;
-using UnityEditor.SceneManagement;
+using UNetGeneralChaos;
 
-namespace UnityTests
+namespace TutorialsUnitTest
 {
     public class TrapTests
     {

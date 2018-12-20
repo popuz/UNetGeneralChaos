@@ -1,9 +1,11 @@
-﻿
-public interface IUnitMovement 
+﻿namespace UNetGeneralChaos
 {
-    bool UseTick { get; }
+    public interface IUnitMovement
+    {
+        bool UseTick { get; }
 
-    void Init(IPlayerInput playerInput);    
-    void Tick();    
-    void Tick(float fixedDeltaTime);
+        void Init(IPlayerInput playerInput);
+        void Tick();
+        void Tick(float fixedDeltaTime);
+    }
 }

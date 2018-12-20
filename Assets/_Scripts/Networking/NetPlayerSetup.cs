@@ -1,21 +1,24 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
 
-public class NetPlayerSetup : NetworkBehaviour
+namespace UNetGeneralChaos
 {
-    [SerializeField] MonoBehaviour[] _disableBehaviours;
-
-    void Awake()
+    public class NetPlayerSetup : NetworkBehaviour
     {
-        if (hasAuthority) return;
-        SetBehavioursToDisableForOthers(false);
-    }
+        [SerializeField] MonoBehaviour[] _disableBehaviours;
 
-    public override void OnStartAuthority() => SetBehavioursToDisableForOthers(true);
+        void Awake()
+        {
+            if (hasAuthority) return;
+            SetBehavioursToDisableForOthers(false);
+        }
 
-    private void SetBehavioursToDisableForOthers(bool flag)
-    {
-        for (int i = 0; i < _disableBehaviours.Length; i++)
-            _disableBehaviours[i].enabled = flag;
+        public override void OnStartAuthority() => SetBehavioursToDisableForOthers(true);
+
+        private void SetBehavioursToDisableForOthers(bool flag)
+        {
+            for (int i = 0; i < _disableBehaviours.Length; i++)
+                _disableBehaviours[i].enabled = flag;
+        }
     }
 }

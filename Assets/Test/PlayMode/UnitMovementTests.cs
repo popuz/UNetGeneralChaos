@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using NSubstitute;
-using NUnit.Framework;
-using UnityEngine;
-using UnityEngine.TestTools;
-
-namespace UnityTests
+﻿namespace UnityTestsNamesExamples
 {
+    ///Possible Tests:
+    // AtLeastOnePaddleIsSuccesfullyCreated
+    // TwoPaddlesAreSuccesfullyCreated
+
+    // If_Left_Direction_Was_Provided_Then_Transform_Moves_Up
+    // If_Speed_Is_Set_To_2_Then_Transform_Moves_2_World_Units
+
     //public class UnitMovementTests
     //{
     //    //[UnityTest]
