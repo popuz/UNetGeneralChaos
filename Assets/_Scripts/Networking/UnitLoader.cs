@@ -9,6 +9,7 @@ namespace UNetGeneralChaos
         private GameObject _unitPfb;
 
         public override void OnStartServer() => 
-            NetworkServer.SpawnWithClientAuthority( Instantiate(_unitPfb), this.gameObject);
+            NetworkServer.SpawnWithClientAuthority( Instantiate(_unitPfb, transform.position, Quaternion.identity), 
+                                                    this.gameObject);
     }
 }

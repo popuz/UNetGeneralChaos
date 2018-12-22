@@ -8,7 +8,7 @@ namespace UNetGeneralChaos
     /// </summary>
     [DisallowMultipleComponent]
     public class PlayerController : MonoBehaviour, ICharacter
-    {        
+    {                
         private IPlayerInput _inputScheme;        
         /// <summary>
         /// Logic that makes unit movement depending on the initialized InputScheme
@@ -26,6 +26,11 @@ namespace UNetGeneralChaos
         [SerializeField, Tooltip("Target animator which should be coupled with player logic")]
         private Animator _targetAnimator;
         private UnitAnimation _animCtrl;
+
+        [SerializeField, Tooltip("Different visual representation of the player")]
+        private Mesh[] _avatarMeshes;
+        [SerializeField, Tooltip("Renderer responsibel for visual representation of the character (SkeletalMesh)")]
+        private Renderer _characterRenderer;               
 
         [SerializeField]
         private bool _isPlayer;
