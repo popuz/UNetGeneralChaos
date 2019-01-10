@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Pavao\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Pavao\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_UNetGeneralChaos.178309353.00" t="ExcludeRecursive" />
+    <e p="G:\UNIVIRLAB TEAM\Fun Projects\UNetGeneralChaos" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="_Scripts" t="Include">
+          <e p="ForTestingPurpose" t="Include">
+            <e p="ICharacter.cs" t="Include" />
+            <e p="TrapBehaviour.cs" t="Include" />
+          </e>
+          <e p="GeekB" t="Include">
+            <e p="CameraController.cs" t="Include" />
+            <e p="FollowerChildTest.cs" t="Include" />
+            <e p="UnitMovement.cs" t="Include" />
+          </e>
+          <e p="Input" t="Include">
+            <e p="ClickToMoveInputScheme.cs" t="Include" />
+            <e p="IPlayerInput.cs" t="Include" />
+            <e p="WASDInputScheme.cs" t="Include" />
+          </e>
+          <e p="MainScripts.asmdef" t="Include" />
+          <e p="Movement" t="Include">
+            <e p="IUnitMovement.cs" t="Include" />
+            <e p="NavMeshUnitMover.cs" t="Include" />
+            <e p="WASDUnitMover.cs" t="Include" />
+          </e>
+          <e p="Networking" t="Include">
+            <e p="NetPlayerSetup.cs" t="Include" />
+            <e p="PlayerStats.cs" t="Include" />
+            <e p="UnitLoader.cs" t="Include" />
+          </e>
+          <e p="PlayerController.cs" t="Include" />
+          <e p="UnitAnimation.cs" t="Include" />
+        </e>
+        <e p="LowPolyWaterv2" t="Include">
+          <e p="Demos" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="DemoFreeFlyCamera.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Editor" t="Include">
+            <e p="LPWInspector.cs" t="Include" />
+            <e p="LPWShaderGUI.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="LowPolyWaterScript.cs" t="Include" />
+            <e p="src" t="Include">
+              <e p="LPWDepthEffect.cs" t="Include" />
+              <e p="LPWDisplace.cs" t="Include" />
+              <e p="LPWHiddenProps.cs" t="Include" />
+              <e p="LPWNoise.cs" t="Include" />
+              <e p="LPWNormalSolver.cs" t="Include" />
+              <e p="LPWReflection.cs" t="Include" />
+              <e p="LPWWaterChunk.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="LowPolyWaterAdvanced.shader" t="Include" />
+            <e p="LowPolyWaterLite.shader" t="Include" />
+            <e p="LPWCompatibility.cginc" t="Include" />
+            <e p="LPWLighting.cginc" t="Include" />
+            <e p="LPWLite.cginc" t="Include" />
+            <e p="LPWNoise.cginc" t="Include" />
+            <e p="LPWReflection.cginc" t="Include" />
+            <e p="LPWRenderDepth.shader" t="Include" />
+            <e p="LPWRipples.cginc" t="Include" />
+            <e p="LPWShoreBlend.cginc" t="Include" />
+            <e p="LPWStandard.cginc" t="Include" />
+            <e p="LPWWaves.cginc" t="Include" />
+          </e>
+        </e>
+        <e p="PolygonPacks" t="Include">
+          <e p="BattleRoyale" t="Include">
+            <e p="Materials" t="Include">
+              <e p="Shader" t="Include">
+                <e p="DamageZone.shader" t="Include" />
+                <e p="Particle VertexLit Blended_Backface.shader" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="PolygonZombies" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="POLYGON_Zombies.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="UnitTests" t="Include">
+          <e p="Editor" t="Include">
+            <e p="TrapTests.cs" t="Include" />
+            <e p="WASDMovementLogicTest.cs" t="Include" />
+          </e>
+          <e p="PlayMode" t="Include">
+            <e p="NavMeshMovementPlayTest.cs" t="Include" />
+            <e p="PlayMode.asmdef" t="Include" />
+            <e p="UnitMovementTests.cs" t="Include" />
+            <e p="WASDMovementPlayTest.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="MainScripts.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="PlayMode.csproj" t="IncludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+      <e p="UNetGeneralChaos.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>

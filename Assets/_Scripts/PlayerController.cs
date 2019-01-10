@@ -4,12 +4,13 @@ using UnityEngine.AI;
 namespace UNetGeneralChaos
 {
     /// <summary>
-    /// Main wraper and coupler of logic related to the player character gameObject.
+    /// Main wrapper and coupler of logic related to the player character gameObject.
     /// </summary>
     [DisallowMultipleComponent]
     public class PlayerController : MonoBehaviour, ICharacter
-    {                
-        private IPlayerInput _inputScheme;        
+    {
+        private IPlayerInput _inputScheme;
+
         /// <summary>
         /// Logic that makes unit movement depending on the initialized InputScheme
         /// </summary>
@@ -25,15 +26,17 @@ namespace UNetGeneralChaos
 
         [SerializeField, Tooltip("Target animator which should be coupled with player logic")]
         private Animator _targetAnimator;
+
         private UnitAnimation _animCtrl;
 
         [SerializeField, Tooltip("Different visual representation of the player")]
         private Mesh[] _avatarMeshes;
-        [SerializeField, Tooltip("Renderer responsibel for visual representation of the character (SkeletalMesh)")]
-        private Renderer _characterRenderer;               
 
-        [SerializeField]
-        private bool _isPlayer;
+        [SerializeField, Tooltip("Renderer responsible for visual representation of the character (SkeletalMesh)")]
+        private Renderer _characterRenderer;
+
+        [SerializeField] private bool _isPlayer;
+
         /// <summary>
         /// Whether it's a Player or a Bot/NPC
         /// </summary>
@@ -44,26 +47,26 @@ namespace UNetGeneralChaos
         /// </summary>
         public int Health { get; set; }
 
-        void Awake()
+        private void Awake()
         {
             var navAgentTmp = GetComponent<NavMeshAgent>();
 
-            _inputScheme = new ClickToMoveInputScheme();//ClickToMoveInputScheme();//WASDInputScheme();
-            UnitMover = new NavMeshUnitMover(navAgentTmp, _movementMask, Camera.main);//new ClickToMoveUnitMover(navAgentTmp, _movementMask, Camera.main);//new WASDUnitMover(transform, MoveSpeed);
+            _inputScheme = new ClickToMoveInputScheme(); //ClickToMoveInputScheme();//WASDInputScheme();
+            UnitMover = new NavMeshUnitMover(navAgentTmp, _movementMask, Camera.main); //new ClickToMoveUnitMover(navAgentTmp, _movementMask, Camera.main);//new WASDUnitMover(transform, MoveSpeed);
 
-            if (navAgentTmp != null)
+            if (navAgentTmp)
                 _animCtrl = new UnitAnimation(_targetAnimator ?? GetComponentInChildren<Animator>(), navAgentTmp);
         }
 
-        void Start()
+        private void Start()
         {
-            Camera.main.GetComponent<CameraController>().Target = transform;
+            if (Camera.main) Camera.main.GetComponent<CameraController>().Target = transform;
             UnitMover?.Init(_inputScheme);
         }
 
-        void Update() => _inputScheme?.ReadInput();
+        private void Update() => _inputScheme?.ReadInput();
 
-        void FixedUpdate()
+        private void FixedUpdate()
         {
             if (UnitMover.UseTick)
                 UnitMover.Tick(Time.fixedDeltaTime);
