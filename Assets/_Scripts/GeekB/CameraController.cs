@@ -17,12 +17,13 @@ public class CameraController : MonoBehaviour
     private float _prevMouseX; /// предыдущее положение мыши для отслеживания ее перемещения за кадр
 
     private bool _hasTarget = false;
+    private Transform _target;
+    
     public Transform Target {
-        private get => Target;
-        set
-        {
-            Target = value;
-            _hasTarget = value != null;
+        private get => _target;
+        set { 
+            _target = value;
+            _hasTarget = value!=null;
         }
     }    
     

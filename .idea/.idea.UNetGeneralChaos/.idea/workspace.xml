@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd1b4be-66c9-4c99-b3b2-1327c9813be7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerUnit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerUnit.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerStats.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UnitAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UnitAnimation.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,39 +21,55 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
+            <state relative-caret-position="984">
               <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
               <folding>
-                <marker date="1547973723150" expanded="false" signature="6:40" ph="..." />
-                <marker date="1547973723150" expanded="true" signature="68:2643" ph="{...}" />
-                <marker date="1547973723150" expanded="true" signature="75:193" ph="/// Main wrapper and coupler of logic related to the player character gameObject. ... " />
-                <marker date="1547973723150" expanded="true" signature="287:2641" ph="{...}" />
-                <marker date="1547973723150" expanded="true" signature="346:466" ph="/// Logic that makes unit movement depending on the initialized InputScheme ... " />
-                <marker date="1547973723150" expanded="true" signature="660:797" ph="/// Speed of movement passed in UnitMover on initialization. Works only with WASDInputScheme ... " />
-                <marker date="1547973723150" expanded="false" signature="1372:1455" ph="/// Whether it's a Player or a Bot/NPC ... " />
-                <marker date="1547973723150" expanded="false" signature="1508:1588" ph="/// Current Health of the character ... " />
-                <marker date="1547973723150" expanded="true" signature="1658:2326" ph="{...}" />
-                <marker date="1547973723150" expanded="true" signature="2495:2635" ph="{...}" />
+                <marker date="1548172682013" expanded="false" signature="6:40" ph="..." />
+                <marker date="1548172682013" expanded="true" signature="68:2643" ph="{...}" />
+                <marker date="1548172682013" expanded="true" signature="75:193" ph="/// Main wrapper and coupler of logic related to the player character gameObject. ... " />
+                <marker date="1548172682013" expanded="true" signature="287:2641" ph="{...}" />
+                <marker date="1548172682013" expanded="true" signature="346:466" ph="/// Logic that makes unit movement depending on the initialized InputScheme ... " />
+                <marker date="1548172682013" expanded="true" signature="660:797" ph="/// Speed of movement passed in UnitMover on initialization. Works only with WASDInputScheme ... " />
+                <marker date="1548172682013" expanded="true" signature="1372:1455" ph="/// Whether it's a Player or a Bot/NPC ... " />
+                <marker date="1548172682013" expanded="true" signature="1508:1588" ph="/// Current Health of the character ... " />
+                <marker date="1548172682013" expanded="true" signature="1658:2326" ph="{...}" />
+                <marker date="1548172682013" expanded="true" signature="2495:2635" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+              <folding>
+                <marker date="1548172682011" expanded="false" signature="6:48" ph="..." />
+                <marker date="1548172682011" expanded="true" signature="86:1267" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="293:546" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="353:479" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="492:540" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="695:849" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="904:957" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="1019:1152" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="1208:1265" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            <state relative-caret-position="172">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
               <folding>
-                <marker date="1548159566134" expanded="false" signature="6:48" ph="..." />
-                <marker date="1548159566134" expanded="true" signature="86:1267" ph="{...}" />
-                <marker date="1548159566134" expanded="true" signature="293:546" ph="{...}" />
-                <marker date="1548159566134" expanded="true" signature="353:479" ph="{...}" />
-                <marker date="1548159566134" expanded="true" signature="492:540" ph="{...}" />
-                <marker date="1548159566134" expanded="true" signature="695:849" ph="{...}" />
-                <marker date="1548159566134" expanded="true" signature="904:957" ph="{...}" />
-                <marker date="1548159566134" expanded="true" signature="1019:1152" ph="{...}" />
-                <marker date="1548159566134" expanded="true" signature="1208:1265" ph="{...}" />
+                <marker date="1548172978251" expanded="true" signature="65:1927" ph="{...}" />
+                <marker date="1548172978251" expanded="true" signature="858:980" ph="{...}" />
+                <marker date="1548172978251" expanded="true" signature="903:974" ph="{...}" />
+                <marker date="1548172978251" expanded="true" signature="1068:1501" ph="{...}" />
+                <marker date="1548172978251" expanded="true" signature="1532:1925" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -70,18 +78,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
+            <state relative-caret-position="720">
               <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
-                <marker date="1548159573606" expanded="true" signature="105:1960" ph="{...}" />
-                <marker date="1548159573606" expanded="true" signature="667:825" ph="{...}" />
-                <marker date="1548159573606" expanded="false" signature="869:1107" ph="{...}" />
-                <marker date="1548159573606" expanded="false" signature="933:996" ph="{...}" />
-                <marker date="1548159573606" expanded="false" signature="1009:1091" ph="{...}" />
-                <marker date="1548159573606" expanded="false" signature="1153:1304" ph="{...}" />
-                <marker date="1548159573606" expanded="false" signature="1349:1426" ph="{...}" />
-                <marker date="1548159573606" expanded="false" signature="1475:1700" ph="{...}" />
-                <marker date="1548159573606" expanded="false" signature="1739:1958" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="105:1960" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="667:825" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="869:1107" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="933:996" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="1009:1091" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="1153:1304" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="1349:1426" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="1475:1700" ph="{...}" />
+                <marker date="1548172682011" expanded="true" signature="1739:1958" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -103,19 +111,19 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/ForTestingPurpose/ICharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UnitAnimation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/UnitMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D616BE05-755D-41A0-8981-0B5C14E4DD50/1e/3bb679c8/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Stat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Input/WASDInputScheme.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/EnemyStats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/MainScripts.asmdef" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/UnitLoader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/NetPlayerSetup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -129,9 +137,9 @@
         <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Stat.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs" />
       </list>
     </option>
   </component>
@@ -200,11 +208,12 @@
       <workItem from="1547641005054" duration="7516000" />
       <workItem from="1547973637013" duration="1119000" />
       <workItem from="1548158082283" duration="1654000" />
+      <workItem from="1548172745108" duration="239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19638000" />
+    <option name="totallyTimeSpent" value="19906000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -217,6 +226,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49825785" weight="0.1827027" />
       <window_info id="Structure" order="1" sideWeight="0.5005807" side_tool="true" weight="0.32972974" />
@@ -346,15 +356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="13" column="59" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
-          <folding>
-            <marker date="1547641557457" expanded="false" signature="6:40" ph="..." />
-            <marker date="1547641557457" expanded="true" signature="68:987" ph="{...}" />
-            <marker date="1547641557457" expanded="false" signature="75:155" ph="/// Sync animation with NavMeshAgent state. ... " />
-            <marker date="1547641557457" expanded="true" signature="186:985" ph="{...}" />
-            <marker date="1547641557457" expanded="false" signature="346:579" ph="/// Constructor ... " />
-            <marker date="1547641557457" expanded="true" signature="647:729" ph="{...}" />
-            <marker date="1547641557457" expanded="false" signature="739:893" ph="/// Update/FixedUpdate analouge: called in every frame to perform the syncronization of animation with logic. ... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -410,20 +411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-          <folding>
-            <marker date="1548159203093" expanded="true" signature="65:1943" ph="{...}" />
-            <marker date="1548159203093" expanded="true" signature="858:996" ph="{...}" />
-            <marker date="1548159203093" expanded="true" signature="902:990" ph="{...}" />
-            <marker date="1548159203093" expanded="true" signature="1084:1517" ph="{...}" />
-            <marker date="1548159203093" expanded="true" signature="1548:1941" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/NetPlayerSetup.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -453,55 +440,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
+        <state relative-caret-position="984">
           <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
           <folding>
-            <marker date="1547973723150" expanded="false" signature="6:40" ph="..." />
-            <marker date="1547973723150" expanded="true" signature="68:2643" ph="{...}" />
-            <marker date="1547973723150" expanded="true" signature="75:193" ph="/// Main wrapper and coupler of logic related to the player character gameObject. ... " />
-            <marker date="1547973723150" expanded="true" signature="287:2641" ph="{...}" />
-            <marker date="1547973723150" expanded="true" signature="346:466" ph="/// Logic that makes unit movement depending on the initialized InputScheme ... " />
-            <marker date="1547973723150" expanded="true" signature="660:797" ph="/// Speed of movement passed in UnitMover on initialization. Works only with WASDInputScheme ... " />
-            <marker date="1547973723150" expanded="false" signature="1372:1455" ph="/// Whether it's a Player or a Bot/NPC ... " />
-            <marker date="1547973723150" expanded="false" signature="1508:1588" ph="/// Current Health of the character ... " />
-            <marker date="1547973723150" expanded="true" signature="1658:2326" ph="{...}" />
-            <marker date="1547973723150" expanded="true" signature="2495:2635" ph="{...}" />
+            <marker date="1548172682013" expanded="false" signature="6:40" ph="..." />
+            <marker date="1548172682013" expanded="true" signature="68:2643" ph="{...}" />
+            <marker date="1548172682013" expanded="true" signature="75:193" ph="/// Main wrapper and coupler of logic related to the player character gameObject. ... " />
+            <marker date="1548172682013" expanded="true" signature="287:2641" ph="{...}" />
+            <marker date="1548172682013" expanded="true" signature="346:466" ph="/// Logic that makes unit movement depending on the initialized InputScheme ... " />
+            <marker date="1548172682013" expanded="true" signature="660:797" ph="/// Speed of movement passed in UnitMover on initialization. Works only with WASDInputScheme ... " />
+            <marker date="1548172682013" expanded="true" signature="1372:1455" ph="/// Whether it's a Player or a Bot/NPC ... " />
+            <marker date="1548172682013" expanded="true" signature="1508:1588" ph="/// Current Health of the character ... " />
+            <marker date="1548172682013" expanded="true" signature="1658:2326" ph="{...}" />
+            <marker date="1548172682013" expanded="true" signature="2495:2635" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
+        <state relative-caret-position="720">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
-            <marker date="1548159573606" expanded="true" signature="105:1960" ph="{...}" />
-            <marker date="1548159573606" expanded="true" signature="667:825" ph="{...}" />
-            <marker date="1548159573606" expanded="false" signature="869:1107" ph="{...}" />
-            <marker date="1548159573606" expanded="false" signature="933:996" ph="{...}" />
-            <marker date="1548159573606" expanded="false" signature="1009:1091" ph="{...}" />
-            <marker date="1548159573606" expanded="false" signature="1153:1304" ph="{...}" />
-            <marker date="1548159573606" expanded="false" signature="1349:1426" ph="{...}" />
-            <marker date="1548159573606" expanded="false" signature="1475:1700" ph="{...}" />
-            <marker date="1548159573606" expanded="false" signature="1739:1958" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="105:1960" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="667:825" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="869:1107" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="933:996" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="1009:1091" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="1153:1304" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="1349:1426" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="1475:1700" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="1739:1958" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
+        <state relative-caret-position="552">
           <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding>
-            <marker date="1548159566134" expanded="false" signature="6:48" ph="..." />
-            <marker date="1548159566134" expanded="true" signature="86:1267" ph="{...}" />
-            <marker date="1548159566134" expanded="true" signature="293:546" ph="{...}" />
-            <marker date="1548159566134" expanded="true" signature="353:479" ph="{...}" />
-            <marker date="1548159566134" expanded="true" signature="492:540" ph="{...}" />
-            <marker date="1548159566134" expanded="true" signature="695:849" ph="{...}" />
-            <marker date="1548159566134" expanded="true" signature="904:957" ph="{...}" />
-            <marker date="1548159566134" expanded="true" signature="1019:1152" ph="{...}" />
-            <marker date="1548159566134" expanded="true" signature="1208:1265" ph="{...}" />
+            <marker date="1548172682011" expanded="false" signature="6:48" ph="..." />
+            <marker date="1548172682011" expanded="true" signature="86:1267" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="293:546" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="353:479" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="492:540" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="695:849" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="904:957" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="1019:1152" ph="{...}" />
+            <marker date="1548172682011" expanded="true" signature="1208:1265" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding>
+            <marker date="1548172978251" expanded="true" signature="65:1927" ph="{...}" />
+            <marker date="1548172978251" expanded="true" signature="858:980" ph="{...}" />
+            <marker date="1548172978251" expanded="true" signature="903:974" ph="{...}" />
+            <marker date="1548172978251" expanded="true" signature="1068:1501" ph="{...}" />
+            <marker date="1548172978251" expanded="true" signature="1532:1925" ph="{...}" />
           </folding>
         </state>
       </provider>
