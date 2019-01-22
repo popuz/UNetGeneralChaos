@@ -16,8 +16,16 @@ public class CameraController : MonoBehaviour
     private float _currentZoom = 10f; /// текущее значение приближения
     private float _prevMouseX; /// предыдущее положение мыши для отслеживания ее перемещения за кадр
 
-    public Transform Target {private get; set; }
-
+    private bool _hasTarget = false;
+    public Transform Target {
+        private get => Target;
+        set
+        {
+            Target = value;
+            _hasTarget = value != null;
+        }
+    }    
+    
     private void Awake() => _transform = transform;
 
     private void Update()
@@ -32,7 +40,9 @@ public class CameraController : MonoBehaviour
     }
 
     private void LateUpdate()
-    {      
+    {
+        if (_hasTarget == false) return;
+        
         var position = Target.position;
         _transform.position = position - _offset * _currentZoom;
         _transform.LookAt(position + Vector3.up * _pitch); /// поворот камеры на игрока                               

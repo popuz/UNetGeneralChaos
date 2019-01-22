@@ -55,14 +55,12 @@ namespace UNetGeneralChaos
             UnitMover = new NavMeshUnitMover(navAgentTmp, _movementMask, Camera.main); //new ClickToMoveUnitMover(navAgentTmp, _movementMask, Camera.main);//new WASDUnitMover(transform, MoveSpeed);
 
             if (navAgentTmp)
-                _animCtrl = new UnitAnimation(_targetAnimator ?? GetComponentInChildren<Animator>(), navAgentTmp);
+                _animCtrl = new UnitAnimation(_targetAnimator != null? _targetAnimator : GetComponentInChildren<Animator>(), navAgentTmp);
+            
+            if (Camera.main != null) Camera.main.GetComponent<CameraController>().Target = transform;
         }
 
-        private void Start()
-        {
-            if (Camera.main) Camera.main.GetComponent<CameraController>().Target = transform;
-            UnitMover?.Init(_inputScheme);
-        }
+        private void Start() => UnitMover?.Init(_inputScheme);        
 
         private void Update() => _inputScheme?.ReadInput();
 

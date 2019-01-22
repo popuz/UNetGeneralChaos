@@ -14,7 +14,10 @@
           </e>
           <e p="GeekB" t="Include">
             <e p="CameraController.cs" t="Include" />
+            <e p="Enemy.cs" t="Include" />
             <e p="FollowerChildTest.cs" t="Include" />
+            <e p="Stat.cs" t="Include" />
+            <e p="Unit.cs" t="Include" />
             <e p="UnitMovement.cs" t="Include" />
           </e>
           <e p="Input" t="Include">
@@ -29,9 +32,11 @@
             <e p="WASDUnitMover.cs" t="Include" />
           </e>
           <e p="Networking" t="Include">
+            <e p="EnemyStats.cs" t="Include" />
             <e p="NetPlayerSetup.cs" t="Include" />
             <e p="PlayerStats.cs" t="Include" />
             <e p="UnitLoader.cs" t="Include" />
+            <e p="UnitStats.cs" t="Include" />
           </e>
           <e p="PlayerController.cs" t="Include" />
           <e p="UnitAnimation.cs" t="Include" />

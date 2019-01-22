@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcd1b4be-66c9-4c99-b3b2-1327c9813be7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LowPolyWaterv2/Materials/LPWaterHighQuality.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LowPolyWaterv2/Materials/LPWaterHighQuality.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/ConnectionScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/ConnectionScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerAnimator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerUnit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerUnit.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerStats.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UnitAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UnitAnimation.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,39 +21,67 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="UNetGeneralChaos" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+            <state relative-caret-position="276">
+              <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
               <folding>
-                <marker date="1547057511448" expanded="false" signature="6:40" ph="..." />
-                <marker date="1547057511448" expanded="true" signature="68:2619" ph="{...}" />
-                <marker date="1547057511448" expanded="true" signature="75:193" ph="/// Main wrapper and coupler of logic related to the player character gameObject. ... " />
-                <marker date="1547057511448" expanded="true" signature="287:2617" ph="{...}" />
-                <marker date="1547057511448" expanded="true" signature="346:466" ph="/// Logic that makes unit movement depending on the initialized InputScheme ... " />
-                <marker date="1547057511448" expanded="true" signature="660:797" ph="/// Speed of movement passed in UnitMover on initialization. Works only with WASDInputScheme ... " />
-                <marker date="1547057511448" expanded="false" signature="1372:1455" ph="/// Whether it's a Player or a Bot/NPC ... " />
-                <marker date="1547057511448" expanded="false" signature="1508:1588" ph="/// Current Health of the character ... " />
-                <marker date="1547057511448" expanded="true" signature="1658:2187" ph="{...}" />
-                <marker date="1547057511448" expanded="true" signature="2217:2374" ph="{...}" />
-                <marker date="1547057511448" expanded="true" signature="2471:2611" ph="{...}" />
+                <marker date="1547973723150" expanded="false" signature="6:40" ph="..." />
+                <marker date="1547973723150" expanded="true" signature="68:2643" ph="{...}" />
+                <marker date="1547973723150" expanded="true" signature="75:193" ph="/// Main wrapper and coupler of logic related to the player character gameObject. ... " />
+                <marker date="1547973723150" expanded="true" signature="287:2641" ph="{...}" />
+                <marker date="1547973723150" expanded="true" signature="346:466" ph="/// Logic that makes unit movement depending on the initialized InputScheme ... " />
+                <marker date="1547973723150" expanded="true" signature="660:797" ph="/// Speed of movement passed in UnitMover on initialization. Works only with WASDInputScheme ... " />
+                <marker date="1547973723150" expanded="false" signature="1372:1455" ph="/// Whether it's a Player or a Bot/NPC ... " />
+                <marker date="1547973723150" expanded="false" signature="1508:1588" ph="/// Current Health of the character ... " />
+                <marker date="1547973723150" expanded="true" signature="1658:2326" ph="{...}" />
+                <marker date="1547973723150" expanded="true" signature="2495:2635" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+            <state relative-caret-position="178">
+              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
               <folding>
-                <marker date="1547058442395" expanded="true" signature="65:1736" ph="{...}" />
-                <marker date="1547058442395" expanded="true" signature="921:1354" ph="{...}" />
-                <marker date="1547058442395" expanded="true" signature="1385:1734" ph="{...}" />
+                <marker date="1548159566134" expanded="false" signature="6:48" ph="..." />
+                <marker date="1548159566134" expanded="true" signature="86:1267" ph="{...}" />
+                <marker date="1548159566134" expanded="true" signature="293:546" ph="{...}" />
+                <marker date="1548159566134" expanded="true" signature="353:479" ph="{...}" />
+                <marker date="1548159566134" expanded="true" signature="492:540" ph="{...}" />
+                <marker date="1548159566134" expanded="true" signature="695:849" ph="{...}" />
+                <marker date="1548159566134" expanded="true" signature="904:957" ph="{...}" />
+                <marker date="1548159566134" expanded="true" signature="1019:1152" ph="{...}" />
+                <marker date="1548159566134" expanded="true" signature="1208:1265" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <marker date="1548159573606" expanded="true" signature="105:1960" ph="{...}" />
+                <marker date="1548159573606" expanded="true" signature="667:825" ph="{...}" />
+                <marker date="1548159573606" expanded="false" signature="869:1107" ph="{...}" />
+                <marker date="1548159573606" expanded="false" signature="933:996" ph="{...}" />
+                <marker date="1548159573606" expanded="false" signature="1009:1091" ph="{...}" />
+                <marker date="1548159573606" expanded="false" signature="1153:1304" ph="{...}" />
+                <marker date="1548159573606" expanded="false" signature="1349:1426" ph="{...}" />
+                <marker date="1548159573606" expanded="false" signature="1475:1700" ph="{...}" />
+                <marker date="1548159573606" expanded="false" signature="1739:1958" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -66,24 +92,46 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Target</find>
+      <find />
+      <find>_isAggresive</find>
+      <find>_viewDistance</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Input/WASDInputScheme.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/ForTestingPurpose/ICharacter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UnitAnimation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/UnitMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D616BE05-755D-41A0-8981-0B5C14E4DD50/1e/3bb679c8/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Stat.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Input/WASDInputScheme.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/EnemyStats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/MainScripts.asmdef" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/UnitLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/NetPlayerSetup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/_Scripts/Input/WASDInputScheme.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/UnitMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/UnitAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerStats.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Networking/EnemyStats.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Stat.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs" />
       </list>
     </option>
   </component>
@@ -99,44 +147,16 @@
     <option name="height" value="786" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="UnityExplorer" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="AssemblyExplorer" />
-      <pane id="UnityExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="_Scripts" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="Resources" type="1045f7f1:UnityExplorerNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-hidden-items" value="false" />
-      </pane>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
-      <pane id="FileSystemExplorer" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="preferences.build.unityPlugin" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -176,11 +196,15 @@
       <updated>1547049555569</updated>
       <workItem from="1547049559656" duration="5440000" />
       <workItem from="1547055871141" duration="2693000" />
+      <workItem from="1547626603800" duration="1216000" />
+      <workItem from="1547641005054" duration="7516000" />
+      <workItem from="1547973637013" duration="1119000" />
+      <workItem from="1548158082283" duration="1654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8133000" />
+    <option name="totallyTimeSpent" value="19638000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -194,14 +218,14 @@
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1827027" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49825785" weight="0.1827027" />
+      <window_info id="Structure" order="1" sideWeight="0.5005807" side_tool="true" weight="0.32972974" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info id="Captures" order="5" />
+      <window_info id="Favorites" order="4" side_tool="true" weight="0.32972974" />
+      <window_info id="Captures" order="5" sideWeight="0.49941927" weight="0.32972974" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329849" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -217,6 +241,8 @@
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.7259001" />
       <window_info anchor="bottom" id="Unity" order="16" weight="0.329849" />
+      <window_info active="true" anchor="bottom" id="Build" order="17" visible="true" weight="0.329849" />
+      <window_info anchor="bottom" id="Inspection Results" order="18" weight="0.329849" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -272,34 +298,210 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D616BE05-755D-41A0-8981-0B5C14E4DD50/1e/3bb679c8/MonoBehaviour.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+        <state relative-caret-position="247">
+          <caret line="188" column="38" lean-forward="true" selection-start-line="188" selection-start-column="38" selection-end-line="188" selection-end-column="38" />
           <folding>
-            <marker date="1547057511448" expanded="false" signature="6:40" ph="..." />
-            <marker date="1547057511448" expanded="true" signature="68:2619" ph="{...}" />
-            <marker date="1547057511448" expanded="true" signature="75:193" ph="/// Main wrapper and coupler of logic related to the player character gameObject. ... " />
-            <marker date="1547057511448" expanded="true" signature="287:2617" ph="{...}" />
-            <marker date="1547057511448" expanded="true" signature="346:466" ph="/// Logic that makes unit movement depending on the initialized InputScheme ... " />
-            <marker date="1547057511448" expanded="true" signature="660:797" ph="/// Speed of movement passed in UnitMover on initialization. Works only with WASDInputScheme ... " />
-            <marker date="1547057511448" expanded="false" signature="1372:1455" ph="/// Whether it's a Player or a Bot/NPC ... " />
-            <marker date="1547057511448" expanded="false" signature="1508:1588" ph="/// Current Health of the character ... " />
-            <marker date="1547057511448" expanded="true" signature="1658:2187" ph="{...}" />
-            <marker date="1547057511448" expanded="true" signature="2217:2374" ph="{...}" />
-            <marker date="1547057511448" expanded="true" signature="2471:2611" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="0:337" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1547626641438" expanded="false" signature="345:502" ph="..." />
+            <marker date="1547626641438" expanded="true" signature="525:9156" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="530:652" ph="///   &lt;para&gt;MonoBehaviour is the base class from which every Unity script derives.&lt;/para&gt; ... " />
+            <marker date="1547626641438" expanded="true" signature="853:9154" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="884:949" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="955:1055" ph="///   &lt;para&gt;Is any invoke pending on this MonoBehaviour?&lt;/para&gt; ... " />
+            <marker date="1547626641438" expanded="true" signature="1084:1153" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="1159:1262" ph="///   &lt;para&gt;Cancels all Invoke calls on this MonoBehaviour.&lt;/para&gt; ... " />
+            <marker date="1547626641438" expanded="true" signature="1293:1357" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="1363:1543" ph="///   &lt;para&gt;Invokes the method methodName in time seconds.&lt;/para&gt; ... " />
+            <marker date="1547626641438" expanded="true" signature="1597:1674" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="1680:1944" ph="///   &lt;para&gt;Invokes the method methodName in time seconds, then repeatedly every repeatRate seconds.&lt;/para&gt; ... " />
+            <marker date="1547626641438" expanded="true" signature="2025:2281" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="2287:2449" ph="///   &lt;para&gt;Cancels all Invoke calls with name methodName on this behaviour.&lt;/para&gt; ... " />
+            <marker date="1547626641438" expanded="true" signature="2497:2561" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="2567:2701" ph="///   &lt;para&gt;Is any invoke on methodName pending?&lt;/para&gt; ... " />
+            <marker date="1547626641438" expanded="true" signature="2747:2816" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="2822:2993" ph="///   &lt;para&gt;Starts a coroutine named methodName.&lt;/para&gt; ... " />
+            <marker date="1547626641438" expanded="true" signature="3070:3167" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="3173:3344" ph="///   &lt;para&gt;Starts a coroutine named methodName.&lt;/para&gt; ... " />
+            <marker date="1547626641438" expanded="true" signature="3436:3778" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="3784:3898" ph="///   &lt;para&gt;Starts a coroutine.&lt;/para&gt; ... " />
+            <marker date="1547626641438" expanded="true" signature="3955:4259" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="4494:4549" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="4555:4866" ph="///   &lt;para&gt;Stops the first coroutine named methodName, or the coroutine stored in routine running on this behavi ... " />
+            <marker date="1547626641438" expanded="true" signature="4917:5226" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="5232:5543" ph="///   &lt;para&gt;Stops the first coroutine named methodName, or the coroutine stored in routine running on this behavi ... " />
+            <marker date="1547626641438" expanded="true" signature="5592:5887" ph="{...}" />
+            <marker date="1547626641438" expanded="true" signature="5893:6204" ph="///   &lt;para&gt;Stops the first coroutine named methodName, or the coroutine stored in routine running on this behavi ... " />
+            <marker date="1547626641438" expanded="true" signature="6316:6419" ph="///   &lt;para&gt;Stops all coroutines running on this behaviour.&lt;/para&gt; ... " />
+            <marker date="1547626641438" expanded="true" signature="6518:6624" ph="///   &lt;para&gt;Disabling this lets you skip the GUI layout phase.&lt;/para&gt; ... " />
+            <marker date="1547626641438" expanded="true" signature="6770:6922" ph="///   &lt;para&gt;Allow a specific instance of a MonoBehaviour to run in edit mode (only available in the editor).&lt;/par ... " />
+            <marker date="1547626641438" expanded="true" signature="7175:7329" ph="///   &lt;para&gt;Logs message to the Unity Console (identical to Debug.Log).&lt;/para&gt; ... " />
+            <marker date="1547626641438" expanded="true" signature="7374:7412" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/UnitAnimation.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="13" column="59" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
+          <folding>
+            <marker date="1547641557457" expanded="false" signature="6:40" ph="..." />
+            <marker date="1547641557457" expanded="true" signature="68:987" ph="{...}" />
+            <marker date="1547641557457" expanded="false" signature="75:155" ph="/// Sync animation with NavMeshAgent state. ... " />
+            <marker date="1547641557457" expanded="true" signature="186:985" ph="{...}" />
+            <marker date="1547641557457" expanded="false" signature="346:579" ph="/// Constructor ... " />
+            <marker date="1547641557457" expanded="true" signature="647:729" ph="{...}" />
+            <marker date="1547641557457" expanded="false" signature="739:893" ph="/// Update/FixedUpdate analouge: called in every frame to perform the syncronization of animation with logic. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/UnitLoader.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1545498743153" expanded="false" signature="6:48" ph="..." />
+            <marker date="1545498743153" expanded="true" signature="76:438" ph="{...}" />
+            <marker date="1545498743153" expanded="true" signature="125:436" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerStats.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="4" selection-end-column="1" />
+          <folding>
+            <marker date="1547648613245" expanded="true" signature="37:46" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/EnemyStats.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1547649290072" expanded="true" signature="36:45" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Stat.cs.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Stat.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <marker date="1547649526574" expanded="true" signature="59:153" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <marker date="1547650537111" expanded="false" signature="6:48" ph="..." />
+            <marker date="1547650537111" expanded="true" signature="119:452" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        <state relative-caret-position="100">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
           <folding>
-            <marker date="1547058442395" expanded="true" signature="65:1736" ph="{...}" />
-            <marker date="1547058442395" expanded="true" signature="921:1354" ph="{...}" />
-            <marker date="1547058442395" expanded="true" signature="1385:1734" ph="{...}" />
+            <marker date="1548159203093" expanded="true" signature="65:1943" ph="{...}" />
+            <marker date="1548159203093" expanded="true" signature="858:996" ph="{...}" />
+            <marker date="1548159203093" expanded="true" signature="902:990" ph="{...}" />
+            <marker date="1548159203093" expanded="true" signature="1084:1517" ph="{...}" />
+            <marker date="1548159203093" expanded="true" signature="1548:1941" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/NetPlayerSetup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+          <folding>
+            <marker date="1545339204189" expanded="false" signature="6:48" ph="..." />
+            <marker date="1545339204189" expanded="true" signature="76:630" ph="{...}" />
+            <marker date="1545339204189" expanded="true" signature="129:628" ph="{...}" />
+            <marker date="1545339204189" expanded="true" signature="218:328" ph="{...}" />
+            <marker date="1545339204189" expanded="true" signature="484:622" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/UnitMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding>
+            <marker date="1547629761191" expanded="true" signature="6:40" ph="..." />
+            <marker date="1547629761191" expanded="true" signature="124:333" ph="{...}" />
+            <marker date="1547629761191" expanded="true" signature="177:236" ph="{...}" />
+            <marker date="1547629761191" expanded="true" signature="280:330" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+          <folding>
+            <marker date="1547973723150" expanded="false" signature="6:40" ph="..." />
+            <marker date="1547973723150" expanded="true" signature="68:2643" ph="{...}" />
+            <marker date="1547973723150" expanded="true" signature="75:193" ph="/// Main wrapper and coupler of logic related to the player character gameObject. ... " />
+            <marker date="1547973723150" expanded="true" signature="287:2641" ph="{...}" />
+            <marker date="1547973723150" expanded="true" signature="346:466" ph="/// Logic that makes unit movement depending on the initialized InputScheme ... " />
+            <marker date="1547973723150" expanded="true" signature="660:797" ph="/// Speed of movement passed in UnitMover on initialization. Works only with WASDInputScheme ... " />
+            <marker date="1547973723150" expanded="false" signature="1372:1455" ph="/// Whether it's a Player or a Bot/NPC ... " />
+            <marker date="1547973723150" expanded="false" signature="1508:1588" ph="/// Current Health of the character ... " />
+            <marker date="1547973723150" expanded="true" signature="1658:2326" ph="{...}" />
+            <marker date="1547973723150" expanded="true" signature="2495:2635" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <marker date="1548159573606" expanded="true" signature="105:1960" ph="{...}" />
+            <marker date="1548159573606" expanded="true" signature="667:825" ph="{...}" />
+            <marker date="1548159573606" expanded="false" signature="869:1107" ph="{...}" />
+            <marker date="1548159573606" expanded="false" signature="933:996" ph="{...}" />
+            <marker date="1548159573606" expanded="false" signature="1009:1091" ph="{...}" />
+            <marker date="1548159573606" expanded="false" signature="1153:1304" ph="{...}" />
+            <marker date="1548159573606" expanded="false" signature="1349:1426" ph="{...}" />
+            <marker date="1548159573606" expanded="false" signature="1475:1700" ph="{...}" />
+            <marker date="1548159573606" expanded="false" signature="1739:1958" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <marker date="1548159566134" expanded="false" signature="6:48" ph="..." />
+            <marker date="1548159566134" expanded="true" signature="86:1267" ph="{...}" />
+            <marker date="1548159566134" expanded="true" signature="293:546" ph="{...}" />
+            <marker date="1548159566134" expanded="true" signature="353:479" ph="{...}" />
+            <marker date="1548159566134" expanded="true" signature="492:540" ph="{...}" />
+            <marker date="1548159566134" expanded="true" signature="695:849" ph="{...}" />
+            <marker date="1548159566134" expanded="true" signature="904:957" ph="{...}" />
+            <marker date="1548159566134" expanded="true" signature="1019:1152" ph="{...}" />
+            <marker date="1548159566134" expanded="true" signature="1208:1265" ph="{...}" />
           </folding>
         </state>
       </provider>

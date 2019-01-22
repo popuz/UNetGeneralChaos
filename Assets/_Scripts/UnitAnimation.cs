@@ -11,7 +11,7 @@ namespace UNetGeneralChaos
         private Animator _animator;
         private NavMeshAgent _agent;
         
-        private readonly string IsMovingTriggerName = "IsMoving";
+        private readonly string IsMovingTriggerName = "Move";
 
         /// <summary>
         /// Constructor
