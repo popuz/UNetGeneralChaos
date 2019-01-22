@@ -6,8 +6,19 @@ public class Unit : NetworkBehaviour
     [SerializeField] protected UnitMovement _unitMover;
     [SerializeField] protected UnitStats _myStats;
 
-    private bool _isDead;
+    [SerializeField] protected float _reviveDelay = 15f;
+    
+    protected bool _isDead;
+    
+    protected Vector3 _startPos;
+    protected float _reviveTime;
 
+    protected virtual void Start()
+    {
+        _startPos = transform.position;        
+        _reviveTime = _reviveDelay;
+    }
+    
     private void Update() => OnUpdate();
 
     private void OnUpdate()
@@ -25,9 +36,20 @@ public class Unit : NetworkBehaviour
         }
     }
     
-    protected virtual void OnAliveUpdate(){}
-    protected virtual void OnDeadUpdate(){}
-
+    protected virtual void OnAliveUpdate(){}    
+    protected virtual void OnDeadUpdate()
+    {        
+        if (_reviveTime > 0)
+        {
+            _reviveTime -= Time.deltaTime;
+        }
+        else
+        {
+            _reviveTime = _reviveDelay;
+            Revive();
+        }          
+    }
+    
     [ClientCallback]
     protected virtual void Die()
     {

@@ -9,7 +9,6 @@ public class Enemy : Unit
     [SerializeField] private float _minMoveDelay = 4f;
     [SerializeField] private float _maxMoveDelay = 12f;
 
-    private Vector3 _startPos;
     private Vector3 _currDestination;
     private float _changePosTime;
 
@@ -17,44 +16,24 @@ public class Enemy : Unit
     
     [SerializeField] private bool _isAggresive = false;
     [SerializeField] private float _viewDistance = 5f;
-    [SerializeField] private float _reviveDelay = 5f;
-    
-    private float _reviveTime;
 
-    private void Start()
+    protected override void Start()
     {
-        _startPos = transform.position;
-
-        _changePosTime = Random.Range(_minMoveDelay, _maxMoveDelay);
-        _reviveTime = _reviveDelay;
+        base.Start();
+        _changePosTime = Random.Range(_minMoveDelay, _maxMoveDelay);        
     }
-
-    protected override void OnDeadUpdate()
+   
+    protected override void OnAliveUpdate()
     {
-        base.OnDeadUpdate();
-        if (_reviveTime > 0)
-        {
-            _reviveTime -= Time.deltaTime;
-        }
-        else
-        {
-            _reviveTime = _reviveDelay;
-            Revive();
-        }          
+        base.OnAliveUpdate();
+        Wandering(Time.deltaTime);
     }
-    
         protected override void Revive()
         {
             base.Revive();
             transform.position = _startPos;
             if(isServer) _unitMover.MoveToPoint(_startPos);
         }
-
-    protected override void OnAliveUpdate()
-    {
-        base.OnAliveUpdate();
-        Wandering(Time.deltaTime);
-    }
 
         private void Wandering(float deltaTime)
         {

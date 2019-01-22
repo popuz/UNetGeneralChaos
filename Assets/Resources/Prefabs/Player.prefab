@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 104}
   - component: {fileID: 202}
   - component: {fileID: 201}
+  - component: {fileID: 4033235759769973515}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -77,4 +78,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a019fceeee2e1d459b8f4397552dff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _unitPfb: {fileID: 45, guid: a4ac99eaa5c582743880dd554a45aab0, type: 3}
+  _unitPrefab: {fileID: 45, guid: a4ac99eaa5c582743880dd554a45aab0, type: 3}
+  _controller: {fileID: 4033235759769973515}
+--- !u!114 &4033235759769973515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e55bd5953db10468950d97f5fd9b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementMask:
+    serializedVersion: 2
+    m_Bits: 512
