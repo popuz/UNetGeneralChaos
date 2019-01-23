@@ -7,7 +7,7 @@ namespace UNetGeneralChaos
     {
         [SerializeField] MonoBehaviour[] _disableBehaviours;
 
-        void Awake()
+        private void Awake()
         {
             if (hasAuthority) return;
             SetBehavioursToDisableForOthers(false);

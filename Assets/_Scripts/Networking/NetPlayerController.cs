@@ -4,36 +4,36 @@ using UnityEngine.Serialization;
 
 public class NetPlayerController : NetworkBehaviour
 {
-    [SerializeField ] private LayerMask _movementMask;
-    
+    [SerializeField] private LayerMask _movementMask;
+
     private Character _character;
     private Camera _cam;
 
     private bool _hasCharacter = false;
-    
-    private void Awake () => _cam = Camera.main;    
-    
-    private void Update ()
+
+    private void Awake() => _cam = Camera.main;
+
+    private void Update()
     {
-        if (isLocalPlayer && _hasCharacter && Input.GetMouseButtonDown(1)
-            && Physics.Raycast(_cam.ScreenPointToRay(Input.mousePosition), out var hit, 100f, _movementMask))
-        
-            CmdSetMovePoint(hit.point);        
+        if (!isLocalPlayer || !_hasCharacter || !Input.GetMouseButtonDown(0) ||
+            !Physics.Raycast(_cam.ScreenPointToRay(Input.mousePosition), out var hit, 100f, _movementMask)) return;
+
+        CmdSetMovePoint(hit.point);
     }
-    
-    private void OnDestroy () 
+
+    private void OnDestroy()
     {
-        if (_character != null ) Destroy(_character.gameObject);
+        if (_character != null) Destroy(_character.gameObject);
     }
-    
-    public void SetCharacter (Character character, bool isLocalPlayer) 
+
+    public void SetCharacter(Character character, bool IsLocalPlayer)
     {
         _character = character;
         _hasCharacter = true;
-        if (isLocalPlayer)
+        if (IsLocalPlayer)
             _cam.GetComponent<CameraController>().Target = character.transform;
     }
-    
-        [Command]
-        private void CmdSetMovePoint (Vector3 point) => _character.SetMovePoint(point);                           
+
+    [Command]
+    private void CmdSetMovePoint(Vector3 point) => _character.SetMovePoint(point);
 }

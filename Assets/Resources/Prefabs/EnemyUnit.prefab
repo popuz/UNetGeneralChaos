@@ -794,6 +794,7 @@ GameObject:
   - component: {fileID: 6924649777446433767}
   - component: {fileID: 5671344831602247092}
   - component: {fileID: 6924649777446433544}
+  - component: {fileID: 4221033668643531384}
   m_Layer: 0
   m_Name: EnemyUnit
   m_TagString: Untagged
@@ -852,12 +853,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitMover: {fileID: 6924649777446433544}
   _myStats: {fileID: 5671344831602247092}
+  _reviveDelay: 15
   _moveRadius: 5
   _minMoveDelay: 4
   _maxMoveDelay: 15
   _isAggresive: 1
   _viewDistance: 5
-  _reviveDelay: 15
 --- !u!114 &6924649777446433766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -983,7 +984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _disableBehaviours:
-  - {fileID: 6924649777446433545}
+  - {fileID: 4221033668643531384}
 --- !u!114 &5671344831602247092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,6 +1012,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aab3ec40b0c22246a47ae9dece7e33b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4221033668643531384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6924649777446433541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8203438794704844e80d76264067d8ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 6924649777446433685}
+  _agent: {fileID: 6924649777446433760}
 --- !u!1 &6924649777446433542
 GameObject:
   m_ObjectHideFlags: 0

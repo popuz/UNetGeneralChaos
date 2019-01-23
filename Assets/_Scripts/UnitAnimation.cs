@@ -8,16 +8,11 @@ namespace UNetGeneralChaos
     /// </summary>
     public class UnitAnimation
     {
-        private Animator _animator;
-        private NavMeshAgent _agent;
+        private readonly Animator _animator;
+        private readonly NavMeshAgent _agent;
         
-        private readonly string IsMovingTriggerName = "Move";
+        private static readonly int MoveTriggerHash = Animator.StringToHash("Move");
 
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        /// <param name="animator">Targeted AnimatorComponent to be under control</param>
-        /// <param name="agent">NavMeshAgentComponent that should be taken</param>
         public UnitAnimation(Animator animator, NavMeshAgent agent)
         {
             _animator = animator;
@@ -25,9 +20,9 @@ namespace UNetGeneralChaos
         }
 
         /// <summary>
-        /// Update/FixedUpdate analouge: called in every frame to perform the syncronization of animation with logic.
+        /// Update/FixedUpdate analogue: called in every frame to perform the synchronization of animation with logic.
         /// </summary>
-        public void Tick() => _animator.SetBool(IsMovingTriggerName, _agent.hasPath);
+        public void Tick() => _animator.SetBool(MoveTriggerHash, _agent.hasPath);
     }
 }
 

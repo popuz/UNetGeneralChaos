@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
+using UNetGeneralChaos;
 
 public class Character : Unit
 {
@@ -6,7 +8,7 @@ public class Character : Unit
     
     protected override void Die () 
     {
-        base .Die();
+        base .Die();        
         _gfx.SetActive( false ); // hide graphics on die
     }
     
