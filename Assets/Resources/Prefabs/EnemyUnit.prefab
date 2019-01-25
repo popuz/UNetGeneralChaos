@@ -851,12 +851,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d3ffb7e26b29a4ba50f3822dce9db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionCenter: {fileID: 6924649777446433698}
+  radius: 2
   _unitMover: {fileID: 6924649777446433544}
   _myStats: {fileID: 5671344831602247092}
   _reviveDelay: 15
-  _moveRadius: 5
+  _moveRadius: 10
   _minMoveDelay: 4
-  _maxMoveDelay: 15
+  _maxMoveDelay: 12
   _isAggresive: 1
   _viewDistance: 5
 --- !u!114 &6924649777446433766

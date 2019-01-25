@@ -17,7 +17,9 @@
             <e p="Character.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="FollowerChildTest.cs" t="Include" />
+            <e p="GbInteractable.cs" t="Include" />
             <e p="GbUnitAnimation.cs" t="Include" />
+            <e p="GbUnitTriggerAnimation.cs" t="Include" />
             <e p="Stat.cs" t="Include" />
             <e p="Unit.cs" t="Include" />
             <e p="UnitMovement.cs" t="Include" />
@@ -35,6 +37,7 @@
           </e>
           <e p="Networking" t="Include">
             <e p="EnemyStats.cs" t="Include" />
+            <e p="GbCombat.cs" t="Include" />
             <e p="NetPlayerController.cs" t="Include" />
             <e p="NetPlayerSetup.cs" t="Include" />
             <e p="PlayerLoader.cs" t="Include" />

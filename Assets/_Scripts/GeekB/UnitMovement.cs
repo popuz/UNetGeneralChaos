@@ -1,19 +1,43 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class UnitMovement : MonoBehaviour
 {
     private NavMeshAgent _agent;
+    private Transform _target;
 
-    void Start()
+    private void Start() => _agent = GetComponent<NavMeshAgent>();
+    
+    private void Update () 
     {
-        _agent = GetComponent<NavMeshAgent>();
+        if (_target == null) return;
+
+        if (Math.Abs(_agent.velocity.magnitude) < float.Epsilon ) FaceTarget();
+
+        _agent.SetDestination(_target.position);
+    }
+        
+    private void FaceTarget () 
+    {
+        Vector3 direction = _target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation( new Vector3(direction.x,0f, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation,Time.deltaTime * 5f);
+    }    
+    
+    public void MoveToPoint(Vector3 point) =>_agent.SetDestination(point);    
+       
+    public void FollowTarget (GbInteractable newTarget) 
+    {
+        _agent.stoppingDistance = newTarget.radius;
+        _target = newTarget.interactionCenter;
     }
 
-    public void MoveToPoint(Vector3 point)
+    public void StopFollowingTarget () 
     {
-        _agent.SetDestination(point);
+        _agent.stoppingDistance = 0f;
+        _agent.ResetPath();
+        _target = null;
     }
-
 }

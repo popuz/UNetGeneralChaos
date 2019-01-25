@@ -13,7 +13,6 @@ namespace UNetGeneralChaos
 //        public override void OnStartServer() => 
 //            NetworkServer.SpawnWithClientAuthority( Instantiate(_unitPrefab, transform.position, Quaternion.identity), 
 //                                                    this.gameObject);
-
         public override void OnStartAuthority()
         {
             if (isServer)

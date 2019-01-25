@@ -1,17 +1,24 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
 
-public class Unit : NetworkBehaviour
+public class Unit : GbInteractable
 {
     [SerializeField] protected UnitMovement _unitMover;
     [SerializeField] protected UnitStats _myStats;
 
     [SerializeField] protected float _reviveDelay = 15f;
 
+    protected GbInteractable _focus;
+
     protected bool _isDead;
 
     protected Vector3 _startPos;
     private float _reviveTime;
+
+    public delegate void UnitDenegate();
+    [SyncEvent] public event UnitDenegate EventOnDamage;
+    [SyncEvent] public event UnitDenegate EventOnDie;
+    [SyncEvent] public event UnitDenegate EventOnRevive;
 
     protected virtual void Start()
     {
@@ -20,6 +27,14 @@ public class Unit : NetworkBehaviour
     }
 
     private void Update() => OnUpdate();
+
+    public override bool Interact(GameObject user)
+    {
+        GbCombat combat = user.GetComponent<GbCombat>();
+        if (combat == null || !combat.Attack(_myStats)) return base.Interact(user);
+        EventOnDamage?.Invoke();
+        return true;
+    }
 
     private void OnUpdate()
     {
@@ -58,9 +73,30 @@ public class Unit : NetworkBehaviour
     {
         _isDead = true;
         if (!isServer) return;
-
+               
+        CanInteract = false;
+        RemoveFocus();
         _unitMover.MoveToPoint(transform.position);
+        EventOnDie?.Invoke();
         RpcDie();
+    }
+
+    [ClientCallback]
+    protected virtual void Revive()
+    {
+        _isDead = false;
+        if (!isServer) return;
+        
+        CanInteract = true;
+        _myStats.SetHealthRate(1);
+        EventOnRevive?.Invoke();
+        RpcRevive();
+    }
+
+    [ClientRpc]
+    private void RpcRevive()
+    {
+        if (!isServer) Revive();
     }
 
     [ClientRpc]
@@ -69,19 +105,17 @@ public class Unit : NetworkBehaviour
         if (!isServer) Die();
     }
 
-    [ClientCallback]
-    protected virtual void Revive()
+    protected virtual void SetFocus(GbInteractable newFocus)
     {
-        _isDead = false;
-        if (!isServer) return;
+        if (newFocus == _focus) return;
 
-        _myStats.SetHealthRate(1);
-        RpcRevive();
+        _focus = newFocus;
+        _unitMover.FollowTarget(newFocus);
     }
 
-    [ClientRpc]
-    private void RpcRevive()
+    protected virtual void RemoveFocus()
     {
-        if (!isServer) Revive();
+        _focus = null;
+        _unitMover.StopFollowingTarget();
     }
 }
