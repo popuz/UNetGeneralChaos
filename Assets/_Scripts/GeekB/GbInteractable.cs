@@ -10,7 +10,9 @@ public class GbInteractable : NetworkBehaviour
     public bool CanInteract { get; protected set; } = true;
 
     public virtual bool Interact(GameObject user) => false;
-    
+
+    private void OnValidate() => interactionCenter = interactionCenter == null ? GetComponent<Transform>() : interactionCenter;            
+
     protected virtual void OnDrawGizmosSelected () 
     {
         Gizmos.color = Color.yellow;

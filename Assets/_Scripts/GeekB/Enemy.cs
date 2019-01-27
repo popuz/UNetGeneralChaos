@@ -40,8 +40,8 @@ public class Enemy : Unit
             float distance = Vector3.Distance(_focus.interactionCenter.position, transform.position);
             if (distance > _viewDistance || !_focus.CanInteract)
                 RemoveFocus();
-            else if (distance <= _focus.radius)
-                _focus.Interact(gameObject);
+            else if (distance <= _focus.radius && !_focus.Interact(gameObject)) 
+                RemoveFocus();
         }
     }
 

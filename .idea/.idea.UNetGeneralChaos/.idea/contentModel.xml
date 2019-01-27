@@ -18,8 +18,18 @@
             <e p="Enemy.cs" t="Include" />
             <e p="FollowerChildTest.cs" t="Include" />
             <e p="GbInteractable.cs" t="Include" />
+            <e p="GbInventory.cs" t="Include" />
+            <e p="GbSyncListItem.cs" t="Include" />
             <e p="GbUnitAnimation.cs" t="Include" />
             <e p="GbUnitTriggerAnimation.cs" t="Include" />
+            <e p="InventorySlot.cs" t="Include" />
+            <e p="InventoryUI.cs" t="Include" />
+            <e p="Items" t="Include">
+              <e p="GbItem.cs" t="Include" />
+              <e p="GbItemBase.cs" t="Include" />
+              <e p="GbItemCollection.cs" t="Include" />
+              <e p="GbItemPickup.cs" t="Include" />
+            </e>
             <e p="Stat.cs" t="Include" />
             <e p="Unit.cs" t="Include" />
             <e p="UnitMovement.cs" t="Include" />

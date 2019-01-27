@@ -7,17 +7,15 @@
     <list default="true" id="dcd1b4be-66c9-4c99-b3b2-1327c9813be7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UNetGeneralChaos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/EnemyUnit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/EnemyUnit.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerUnit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/PlayerUnit.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/ConnectionScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/ConnectionScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Level 1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GeekB/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GeekB/Character.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GeekB/GbInteractable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GeekB/GbInteractable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GeekB/UnitMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GeekB/UnitMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Networking/NetPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Networking/NetPlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,175 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Character.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <marker date="1548413492045" expanded="false" signature="6:61" ph="..." />
-                <marker date="1548413492045" expanded="true" signature="92:1162" ph="{...}" />
-                <marker date="1548413492045" expanded="true" signature="185:553" ph="{...}" />
-                <marker date="1548413492045" expanded="true" signature="249:547" ph="{...}" />
-                <marker date="1548413492045" expanded="true" signature="588:675" ph="{...}" />
-                <marker date="1548413492045" expanded="true" signature="713:892" ph="{...}" />
-                <marker date="1548413492045" expanded="true" signature="937:1014" ph="{...}" />
-                <marker date="1548413492045" expanded="true" signature="1074:1160" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/NetPlayerController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-              <folding>
-                <marker date="1548413912025" expanded="false" signature="6:81" ph="..." />
-                <marker date="1548413912025" expanded="true" signature="134:1656" ph="{...}" />
-                <marker date="1548413912025" expanded="true" signature="367:1053" ph="{...}" />
-                <marker date="1548413912025" expanded="true" signature="819:1047" ph="{...}" />
-                <marker date="1548413912025" expanded="true" signature="1083:1159" ph="{...}" />
-                <marker date="1548413912025" expanded="true" signature="1230:1411" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/UnitMovement.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-              <folding>
-                <marker date="1548416989426" expanded="false" signature="6:54" ph="..." />
-                <marker date="1548416989426" expanded="true" signature="138:1217" ph="{...}" />
-                <marker date="1548416989426" expanded="true" signature="305:485" ph="{...}" />
-                <marker date="1548416989426" expanded="true" signature="526:808" ph="{...}" />
-                <marker date="1548416989426" expanded="true" signature="961:1072" ph="{...}" />
-                <marker date="1548416989426" expanded="true" signature="1113:1215" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/GbCombat.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-              <folding>
-                <marker date="1548448482915" expanded="false" signature="6:48" ph="..." />
-                <marker date="1548448482915" expanded="true" signature="128:806" ph="{...}" />
-                <marker date="1548448482915" expanded="true" signature="560:804" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/GbUnitTriggerAnimation.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/GbInventory.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="388">
+              <caret line="40" column="34" lean-forward="true" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
               <folding>
-                <marker date="1548416516038" expanded="true" signature="71:783" ph="{...}" />
-                <marker date="1548416516038" expanded="true" signature="233:393" ph="{...}" />
-                <marker date="1548416516038" expanded="true" signature="420:471" ph="{...}" />
-                <marker date="1548416516038" expanded="true" signature="495:543" ph="{...}" />
-                <marker date="1548416516038" expanded="true" signature="570:703" ph="{...}" />
-                <marker date="1548416516038" expanded="true" signature="730:781" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-              <folding>
-                <marker date="1548415781947" expanded="false" signature="6:48" ph="..." />
-                <marker date="1548415781947" expanded="true" signature="120:583" ph="{...}" />
-                <marker date="1548415781947" expanded="true" signature="486:581" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-              <folding>
-                <marker date="1548448547866" expanded="false" signature="6:48" ph="..." />
-                <marker date="1548448547866" expanded="true" signature="84:2588" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="629:717" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="811:1018" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="1047:1276" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="1107:1209" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="1222:1270" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="1320:1332" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="1365:1564" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="1400:1463" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="1476:1558" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="1619:1854" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="1912:2106" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="2152:2197" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="2240:2282" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="2344:2467" ph="{...}" />
-                <marker date="1548448547866" expanded="true" signature="2509:2586" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/NetPlayerSetup.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <marker date="1548246292946" expanded="false" signature="6:48" ph="..." />
-                <marker date="1548246292946" expanded="true" signature="76:638" ph="{...}" />
-                <marker date="1548246292946" expanded="true" signature="129:636" ph="{...}" />
-                <marker date="1548246292946" expanded="true" signature="226:336" ph="{...}" />
-                <marker date="1548246292946" expanded="true" signature="492:630" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerLoader.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <marker date="1548250655612" expanded="false" signature="6:81" ph="..." />
-                <marker date="1548250655612" expanded="true" signature="109:1513" ph="{...}" />
-                <marker date="1548250655612" expanded="true" signature="160:1511" ph="{...}" />
-                <marker date="1548250655612" expanded="true" signature="381:625" ph="/* public override void OnStartServer() =&gt; ... */" />
-                <marker date="1548250655612" expanded="true" signature="673:806" ph="{...}" />
-                <marker date="1548250655612" expanded="true" signature="941:1248" ph="{...}" />
-                <marker date="1548250655612" expanded="true" signature="1334:1505" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/GbInteractable.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-              <folding>
-                <marker date="1548359660825" expanded="false" signature="6:81" ph="..." />
-                <marker date="1548359660825" expanded="true" signature="129:498" ph="{...}" />
-                <marker date="1548359660825" expanded="true" signature="380:496" ph="{...}" />
+                <marker date="1548577959336" expanded="false" signature="6:82" ph="..." />
+                <marker date="1548577959336" expanded="true" signature="127:1248" ph="{...}" />
+                <marker date="1548577959336" expanded="true" signature="344:490" ph="{...}" />
+                <marker date="1548577959336" expanded="true" signature="383:457" ph="{...}" />
+                <marker date="1548577959336" expanded="true" signature="527:603" ph="{...}" />
+                <marker date="1548577959336" expanded="true" signature="643:884" ph="{...}" />
+                <marker date="1548577959336" expanded="true" signature="941:1022" ph="{...}" />
+                <marker date="1548577959336" expanded="true" signature="1069:1120" ph="{...}" />
+                <marker date="1548577959336" expanded="true" signature="1196:1246" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -213,36 +57,47 @@
       <find>_isAggresive</find>
       <find>_viewDistance</find>
       <find>RemoveFocus</find>
+      <find>focus.Interact(gameObject);</find>
+      <find>EventOnDamage</find>
+      <find>SetIN</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/NetPlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/ForTestingPurpose/ICharacter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/GbSyncListItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UnitAnimation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Character.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/GbUnitTriggerAnimation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/GbInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/GbUnitAnimation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/UnitMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D616BE05-755D-41A0-8981-0B5C14E4DD50/1e/3bb679c8/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerStats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/GbInventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Items/GbItemCollection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Stat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Input/WASDInputScheme.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/EnemyStats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Movement/NavMeshUnitMover.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/MainScripts.asmdef" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/InventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/GbCombat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/NetPlayerSetup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/NetPlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/ForTestingPurpose/ICharacter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Character.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/InventoryUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Prefabs/Player.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Items/GbItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Items/GbItemBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Items/GbItemPickup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/MainScripts.asmdef" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -256,16 +111,26 @@
         <option value="$PROJECT_DIR$/Assets/_Scripts/UnitAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/GbUnitAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/CameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerLoader.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/GbInteractable.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Character.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/Networking/NetPlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/GbUnitTriggerAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/UnitMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/Networking/GbCombat.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/GbInteractable.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/GbPickUpItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/GbItemPickup.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Items/GbItemCollection.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Items/GbItemBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Items/GbItemPickup.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/GbSyncListItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/GbInventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Character.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/Items/GbItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/InventorySlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/GeekB/InventoryUI.cs" />
       </list>
     </option>
   </component>
@@ -281,39 +146,10 @@
     <option name="height" value="786" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="UnityExplorer" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="FileSystemExplorer" />
-      <pane id="UnityExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="_Scripts" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="_Scripts" type="1045f7f1:UnityExplorerNode" />
-              <item name="GeekB" type="1045f7f1:UnityExplorerNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-hidden-items" value="false" />
-      </pane>
-      <pane id="AssemblyExplorer" />
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
@@ -370,12 +206,14 @@
       <workItem from="1548250126497" duration="1205000" />
       <workItem from="1548358392140" duration="4274000" />
       <workItem from="1548413053485" duration="3397000" />
-      <workItem from="1548448430104" duration="871000" />
+      <workItem from="1548448430104" duration="1472000" />
+      <workItem from="1548497279831" duration="4553000" />
+      <workItem from="1548577856084" duration="2481000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38184000" />
+    <option name="totallyTimeSpent" value="45819000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -388,7 +226,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49825785" weight="0.1827027" />
       <window_info id="Structure" order="1" sideWeight="0.5005807" side_tool="true" weight="0.32972974" />
@@ -625,44 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-          <folding>
-            <marker date="1548417218934" expanded="true" signature="105:2750" ph="{...}" />
-            <marker date="1548417218934" expanded="true" signature="537:640" ph="{...}" />
-            <marker date="1548417218934" expanded="true" signature="692:841" ph="{...}" />
-            <marker date="1548417218934" expanded="true" signature="886:1383" ph="{...}" />
-            <marker date="1548417218934" expanded="true" signature="951:1053" ph="{...}" />
-            <marker date="1548417218934" expanded="true" signature="1066:1377" ph="{...}" />
-            <marker date="1548417218934" expanded="true" signature="1421:1553" ph="{...}" />
-            <marker date="1548417218934" expanded="true" signature="1598:1779" ph="{...}" />
-            <marker date="1548417218934" expanded="true" signature="1810:2029" ph="{...}" />
-            <marker date="1548417218934" expanded="true" signature="2059:2559" ph="{...}" />
-            <marker date="1548417218934" expanded="true" signature="2329:2553" ph="{...}" />
-            <marker date="1548417218934" expanded="true" signature="2611:2748" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Character.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <marker date="1548413492045" expanded="false" signature="6:61" ph="..." />
-            <marker date="1548413492045" expanded="true" signature="92:1162" ph="{...}" />
-            <marker date="1548413492045" expanded="true" signature="185:553" ph="{...}" />
-            <marker date="1548413492045" expanded="true" signature="249:547" ph="{...}" />
-            <marker date="1548413492045" expanded="true" signature="588:675" ph="{...}" />
-            <marker date="1548413492045" expanded="true" signature="713:892" ph="{...}" />
-            <marker date="1548413492045" expanded="true" signature="937:1014" ph="{...}" />
-            <marker date="1548413492045" expanded="true" signature="1074:1160" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/NetPlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1104">
@@ -693,34 +492,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <marker date="1548415781947" expanded="false" signature="6:48" ph="..." />
-            <marker date="1548415781947" expanded="true" signature="120:583" ph="{...}" />
-            <marker date="1548415781947" expanded="true" signature="486:581" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/GbInteractable.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <marker date="1548359660825" expanded="false" signature="6:81" ph="..." />
-            <marker date="1548359660825" expanded="true" signature="129:498" ph="{...}" />
-            <marker date="1548359660825" expanded="true" signature="380:496" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/GbCombat.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
           <folding>
             <marker date="1548448482915" expanded="false" signature="6:48" ph="..." />
             <marker date="1548448482915" expanded="true" signature="128:806" ph="{...}" />
@@ -729,28 +504,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/UnitStats.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        <state relative-caret-position="288">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding>
-            <marker date="1548448547866" expanded="false" signature="6:48" ph="..." />
-            <marker date="1548448547866" expanded="true" signature="84:2588" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="629:717" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="811:1018" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="1047:1276" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="1107:1209" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="1222:1270" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="1320:1332" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="1365:1564" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="1400:1463" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="1476:1558" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="1619:1854" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="1912:2106" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="2152:2197" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="2240:2282" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="2344:2467" ph="{...}" />
-            <marker date="1548448547866" expanded="true" signature="2509:2586" ph="{...}" />
+            <marker date="1548415781947" expanded="false" signature="6:48" ph="..." />
+            <marker date="1548415781947" expanded="true" signature="120:583" ph="{...}" />
+            <marker date="1548415781947" expanded="true" signature="486:581" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -769,26 +530,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerLoader.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <marker date="1548250655612" expanded="false" signature="6:81" ph="..." />
-            <marker date="1548250655612" expanded="true" signature="109:1513" ph="{...}" />
-            <marker date="1548250655612" expanded="true" signature="160:1511" ph="{...}" />
-            <marker date="1548250655612" expanded="true" signature="381:625" ph="/* public override void OnStartServer() =&gt; ... */" />
-            <marker date="1548250655612" expanded="true" signature="673:806" ph="{...}" />
-            <marker date="1548250655612" expanded="true" signature="941:1248" ph="{...}" />
-            <marker date="1548250655612" expanded="true" signature="1334:1505" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/GbUnitTriggerAnimation.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        <state relative-caret-position="720">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
           <folding>
             <marker date="1548416516038" expanded="true" signature="71:783" ph="{...}" />
             <marker date="1548416516038" expanded="true" signature="233:393" ph="{...}" />
@@ -796,6 +541,206 @@
             <marker date="1548416516038" expanded="true" signature="495:543" ph="{...}" />
             <marker date="1548416516038" expanded="true" signature="570:703" ph="{...}" />
             <marker date="1548416516038" expanded="true" signature="730:781" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/GbInteractable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="13" column="126" selection-start-line="13" selection-start-column="126" selection-end-line="13" selection-end-column="126" />
+          <folding>
+            <marker date="1548497502724" expanded="false" signature="6:81" ph="..." />
+            <marker date="1548497502724" expanded="true" signature="129:635" ph="{...}" />
+            <marker date="1548497502724" expanded="true" signature="517:633" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/GbItemPickup.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Enemy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1032">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+          <folding>
+            <marker date="1548498799002" expanded="true" signature="105:2769" ph="{...}" />
+            <marker date="1548498799002" expanded="true" signature="537:640" ph="{...}" />
+            <marker date="1548498799002" expanded="true" signature="692:841" ph="{...}" />
+            <marker date="1548498799002" expanded="true" signature="886:1402" ph="{...}" />
+            <marker date="1548498799002" expanded="true" signature="951:1053" ph="{...}" />
+            <marker date="1548498799002" expanded="true" signature="1066:1396" ph="{...}" />
+            <marker date="1548498799002" expanded="true" signature="1440:1572" ph="{...}" />
+            <marker date="1548498799002" expanded="true" signature="1617:1798" ph="{...}" />
+            <marker date="1548498799002" expanded="true" signature="1829:2048" ph="{...}" />
+            <marker date="1548498799002" expanded="true" signature="2078:2578" ph="{...}" />
+            <marker date="1548498799002" expanded="true" signature="2348:2572" ph="{...}" />
+            <marker date="1548498799002" expanded="true" signature="2630:2767" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/GbSyncListItem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="121" selection-start-line="4" selection-start-column="121" selection-end-line="4" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/InventoryUI.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <marker date="1548580145534" expanded="true" signature="60:1686" ph="{...}" />
+            <marker date="1548580145534" expanded="true" signature="330:560" ph="{...}" />
+            <marker date="1548580145534" expanded="true" signature="412:528" ph="{...}" />
+            <marker date="1548580145534" expanded="true" signature="589:716" ph="{...}" />
+            <marker date="1548580145534" expanded="true" signature="639:710" ph="{...}" />
+            <marker date="1548580145534" expanded="true" signature="776:1386" ph="{...}" />
+            <marker date="1548580145534" expanded="true" signature="1134:1380" ph="{...}" />
+            <marker date="1548580145534" expanded="true" signature="1485:1684" ph="{...}" />
+            <marker date="1548580145534" expanded="true" signature="1538:1678" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/InventorySlot.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <marker date="1548579933728" expanded="true" signature="6:40" ph="..." />
+            <marker date="1548579933728" expanded="true" signature="85:859" ph="{...}" />
+            <marker date="1548579933728" expanded="true" signature="222:358" ph="{...}" />
+            <marker date="1548579933728" expanded="true" signature="399:539" ph="{...}" />
+            <marker date="1548579933728" expanded="true" signature="568:702" ph="{...}" />
+            <marker date="1548579933728" expanded="true" signature="736:780" ph="{...}" />
+            <marker date="1548579933728" expanded="true" signature="807:857" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Networking/PlayerLoader.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="57" column="65" selection-start-line="57" selection-start-column="65" selection-end-line="57" selection-end-column="65" />
+          <folding>
+            <marker date="1548579572292" expanded="false" signature="6:81" ph="..." />
+            <marker date="1548579572292" expanded="true" signature="109:2129" ph="{...}" />
+            <marker date="1548579572292" expanded="true" signature="160:2127" ph="{...}" />
+            <marker date="1548579572292" expanded="true" signature="390:634" ph="/* public override void OnStartServer() =&gt; ... */" />
+            <marker date="1548579572292" expanded="true" signature="769:1067" ph="{...}" />
+            <marker date="1548579572292" expanded="true" signature="805:1021" ph="{...}" />
+            <marker date="1548579572292" expanded="true" signature="1207:1650" ph="{...}" />
+            <marker date="1548579572292" expanded="true" signature="1736:2121" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Items/GbItemPickup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+          <folding>
+            <marker date="1548501250692" expanded="true" signature="62:442" ph="{...}" />
+            <marker date="1548501250692" expanded="true" signature="197:440" ph="{...}" />
+            <marker date="1548501250692" expanded="true" signature="329:407" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Character.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <marker date="1548578022997" expanded="false" signature="6:61" ph="..." />
+            <marker date="1548578022997" expanded="true" signature="92:1379" ph="{...}" />
+            <marker date="1548578022997" expanded="true" signature="228:612" ph="{...}" />
+            <marker date="1548578022997" expanded="true" signature="292:606" ph="{...}" />
+            <marker date="1548578022997" expanded="true" signature="647:734" ph="{...}" />
+            <marker date="1548578022997" expanded="true" signature="772:951" ph="{...}" />
+            <marker date="1548578022997" expanded="true" signature="996:1073" ph="{...}" />
+            <marker date="1548578022997" expanded="true" signature="1133:1219" ph="{...}" />
+            <marker date="1548578022997" expanded="true" signature="1277:1377" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Items/GbItem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <marker date="1548579838560" expanded="true" signature="128:328" ph="{...}" />
+            <marker date="1548579838560" expanded="true" signature="277:326" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Unit.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1484">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+          <folding>
+            <marker date="1548498952931" expanded="false" signature="6:48" ph="..." />
+            <marker date="1548498952931" expanded="true" signature="84:2636" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="629:717" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="811:1066" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="1095:1324" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="1155:1257" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="1270:1318" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="1368:1380" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="1413:1612" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="1448:1511" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="1524:1606" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="1667:1902" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="1960:2154" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="2200:2245" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="2288:2330" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="2392:2515" ph="{...}" />
+            <marker date="1548498952931" expanded="true" signature="2557:2634" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Items/GbItemCollection.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+          <folding>
+            <marker date="1548499045352" expanded="true" signature="162:209" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/Items/GbItemBase.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+          <folding>
+            <marker date="1548499295808" expanded="true" signature="59:809" ph="{...}" />
+            <marker date="1548499295808" expanded="true" signature="188:411" ph="{...}" />
+            <marker date="1548499295808" expanded="true" signature="226:367" ph="{...}" />
+            <marker date="1548499295808" expanded="true" signature="457:722" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/GeekB/GbInventory.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="40" column="34" lean-forward="true" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+          <folding>
+            <marker date="1548577959336" expanded="false" signature="6:82" ph="..." />
+            <marker date="1548577959336" expanded="true" signature="127:1248" ph="{...}" />
+            <marker date="1548577959336" expanded="true" signature="344:490" ph="{...}" />
+            <marker date="1548577959336" expanded="true" signature="383:457" ph="{...}" />
+            <marker date="1548577959336" expanded="true" signature="527:603" ph="{...}" />
+            <marker date="1548577959336" expanded="true" signature="643:884" ph="{...}" />
+            <marker date="1548577959336" expanded="true" signature="941:1022" ph="{...}" />
+            <marker date="1548577959336" expanded="true" signature="1069:1120" ph="{...}" />
+            <marker date="1548577959336" expanded="true" signature="1196:1246" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -5,6 +5,8 @@ using UNetGeneralChaos;
 public class Character : Unit
 {
     [SerializeField] private GameObject _gfx;
+    
+    public GbInventory Inventory;    
 
     protected override void OnAliveUpdate()
     {
@@ -13,8 +15,8 @@ public class Character : Unit
         {
             if (!_focus.CanInteract)            
                 RemoveFocus();            
-            else if ( Vector3.Distance(_focus.interactionCenter.position, transform.position) <= _focus.radius) 
-                _focus.Interact(gameObject);                            
+            else if(Vector3.Distance(_focus.interactionCenter.position, transform.position) <= _focus.radius && !_focus.Interact(gameObject)) 
+                RemoveFocus();                            
         }
     }
 
@@ -41,5 +43,11 @@ public class Character : Unit
     public void SetNewFocus (GbInteractable newFocus) 
     {
         if (!_isDead && newFocus.CanInteract) SetFocus(newFocus);        
+    }
+    
+    public void SetInventory (GbInventory inventory)
+    {                
+        Inventory = inventory;
+        inventory.dropPoint = transform;
     }
 }
