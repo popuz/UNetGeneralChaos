@@ -17,10 +17,6 @@ public class NetPlayerController : NetworkBehaviour
     {
         if (!isLocalPlayer || !_hasCharacter) return;
 
-        if (Input.GetMouseButtonDown(1) && Physics.Raycast(_cam.ScreenPointToRay(Input.mousePosition),
-                out var moveHit, 100f, _movementMask))
-            CmdSetMovePoint(moveHit.point);
-
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(_cam.ScreenPointToRay(Input.mousePosition),
                 out var interactHit, 100f, ~(1 << LayerMask.NameToLayer("Player"))))
         {
@@ -28,6 +24,10 @@ public class NetPlayerController : NetworkBehaviour
             if (interactable != null)
                 CmdSetFocus(interactable.GetComponent<NetworkIdentity>());
         }
+        
+        if (Input.GetMouseButtonDown(1) && Physics.Raycast(_cam.ScreenPointToRay(Input.mousePosition),
+                out var moveHit, 100f, _movementMask))
+            CmdSetMovePoint(moveHit.point);
     }
 
     private void OnDestroy()

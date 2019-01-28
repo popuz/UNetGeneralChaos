@@ -10,14 +10,19 @@ public class Character : Unit
 
     protected override void OnAliveUpdate()
     {
-        base.OnAliveUpdate();
-        if (_focus != null)
+        base.OnAliveUpdate();        
+        if (_focus == null) return;
+                        
+        if (!_focus.CanInteract)
         {
-            if (!_focus.CanInteract)            
-                RemoveFocus();            
-            else if(Vector3.Distance(_focus.interactionCenter.position, transform.position) <= _focus.radius && !_focus.Interact(gameObject)) 
-                RemoveFocus();                            
+            RemoveFocus();
         }
+        else
+        {
+            var distance = Vector3.Distance(_focus.interactionCenter.position, transform.position);
+            if (distance <= _focus.radius && !_focus.Interact(gameObject)) RemoveFocus();            
+        }
+        
     }
 
     protected override void Die()
@@ -39,15 +44,15 @@ public class Character : Unit
         if (!_isDead)
             _unitMover.MoveToPoint(point);
     }
-    
-    public void SetNewFocus (GbInteractable newFocus) 
-    {
-        if (!_isDead && newFocus.CanInteract) SetFocus(newFocus);        
-    }
-    
+      
     public void SetInventory (GbInventory inventory)
     {                
         Inventory = inventory;
         inventory.dropPoint = transform;
+    }
+    
+    public void SetNewFocus (GbInteractable newFocus) 
+    {
+        if (!_isDead && newFocus.CanInteract) SetFocus(newFocus);        
     }
 }

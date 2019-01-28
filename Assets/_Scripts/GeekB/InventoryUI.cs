@@ -2,14 +2,13 @@
 
 public class InventoryUI : MonoBehaviour
 {
-    
-    [ SerializeField ] GameObject inventoryUI;
-   
     public static InventoryUI instance;
-    GbInventory inventory;
-
+    
+    [ SerializeField ] GameObject inventoryUI;          
     [SerializeField] Transform itemsParent;
     [SerializeField] InventorySlot slotPrefab;
+
+    GbInventory inventory;
     InventorySlot[] slots;
 
     private void Awake()
@@ -25,21 +24,21 @@ public class InventoryUI : MonoBehaviour
     }
 
     private void Update () {
-        if (Input.GetButtonDown( "Inventory" )) {
-            inventoryUI.SetActive(!inventoryUI.activeSelf);
-        }
+        if (Input.GetButtonDown( "Inventory" ))
+            inventoryUI.SetActive(!inventoryUI.activeSelf);        
     }
     
     public void SetInventory(GbInventory newInventory)
     {
         inventory = newInventory;
         inventory.onItemChanged += ItemChanged;
-        InventorySlot[] childs = itemsParent.GetComponentsInChildren<InventorySlot>();
+        var childes = itemsParent.GetComponentsInChildren<InventorySlot>();
 
-        for (int i = 0; i < childs.Length; i++) Destroy(childs[i].gameObject);
+        foreach (var child in childes)
+            Destroy(child.gameObject);
 
         slots = new InventorySlot[inventory.space];
-        for (int i = 0; i < inventory.space; i++)
+        for (var i = 0; i < inventory.space; i++)
         {
             slots[i] = Instantiate(slotPrefab, itemsParent);
 
@@ -51,7 +50,7 @@ public class InventoryUI : MonoBehaviour
 
     private void ItemChanged(UnityEngine.Networking.SyncList<GbItem>.Operation op, int itemIndex)
     {
-        for (int i = 0; i < slots.Length; i++)
+        for (var i = 0; i < slots.Length; i++)
         {
             if (i < inventory.items.Count) slots[i].SetItem(inventory.items[i]);
             else slots[i].ClearSlot();

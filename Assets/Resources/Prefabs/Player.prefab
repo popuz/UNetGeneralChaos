@@ -108,5 +108,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 210dbb6b79a43bd4db3a5a9550e4c1a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropPoint: {fileID: 0}
   space: 8
-  items: []

@@ -7,11 +7,11 @@ public class GbInteractable : NetworkBehaviour
     public Transform interactionCenter;
     public float radius = 2f;
 
+    private void OnValidate() => interactionCenter = interactionCenter == null ? this.transform : interactionCenter;
+    
     public bool CanInteract { get; protected set; } = true;
 
-    public virtual bool Interact(GameObject user) => false;
-
-    private void OnValidate() => interactionCenter = interactionCenter == null ? GetComponent<Transform>() : interactionCenter;            
+    public virtual bool Interact(GameObject user) => false;                
 
     protected virtual void OnDrawGizmosSelected () 
     {

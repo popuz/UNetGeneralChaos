@@ -30,14 +30,15 @@ public class Unit : GbInteractable
 
     public override bool Interact(GameObject user)
     {
-        GbCombat combat = user.GetComponent<GbCombat>();
-        
-        if (combat == null) return base.Interact(user);
-        
-        if (combat.Attack(_myStats))        
-            EventOnDamage?.Invoke();
-        
-        return true;
+        Debug.Log(user.name + " interacts with" + name);
+        var combat = user.GetComponent<GbCombat>();
+
+        if (combat != null)
+        {
+            if (combat.Attack(_myStats)) EventOnDamage?.Invoke();            
+            return true;
+        }                        
+        return base.Interact(user);
     }
 
     private void OnUpdate()

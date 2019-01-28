@@ -12,39 +12,34 @@ namespace UNetGeneralChaos
         [SyncVar(hook = nameof(HookUnitIdentity))]
         private NetworkIdentity _unitIdentity;
 
-//        public override void OnStartServer() => 
-//            NetworkServer.SpawnWithClientAuthority( Instantiate(_unitPrefab, transform.position, Quaternion.identity), 
-//                                                    this.gameObject);
-
-        public override bool OnCheckObserver(NetworkConnection connection) => false;
+//        public override bool OnCheckObserver(NetworkConnection connection) => false;
 
         public override void OnStartAuthority()
         {
             if (isServer)
             {
-                Character character = SpawnPlayer(true);
+                Character character =  CreateCharacter();
                 _controller.SetCharacter(character, true);
                 InventoryUI.instance.SetInventory(character.Inventory);
             }
             else CmdCreatePlayer();
         }
-
+        
         [Command]
-        private void CmdCreatePlayer() => SpawnPlayer(false);
+        private void CmdCreatePlayer() =>  _controller.SetCharacter(CreateCharacter(), true);
 
-        private Character SpawnPlayer(bool IsLocalPlayer)
+        private Character CreateCharacter()
         {
             GameObject unit = Instantiate(_unitPrefab, transform.position, Quaternion.identity);
-            NetworkServer.Spawn(unit);
-            _unitIdentity = unit.GetComponent<NetworkIdentity>();
-
             var character = unit.GetComponent<Character>();
-            character.SetInventory(GetComponent<GbInventory>());
-            _controller.SetCharacter(character, IsLocalPlayer);
+            
+            NetworkServer.Spawn(unit);
+            _unitIdentity = unit.GetComponent<NetworkIdentity>();                       
+            character.SetInventory(GetComponent<GbInventory>());            
 
             return character;
         }
-
+  
         [ClientCallback]
         private void HookUnitIdentity(NetworkIdentity unit)
         {
@@ -52,9 +47,9 @@ namespace UNetGeneralChaos
 
             _unitIdentity = unit;
             Character character = unit.GetComponent<Character>();
-            
+
+            _controller.SetCharacter(character, true);
             character.SetInventory(GetComponent<GbInventory>());
-            _controller.SetCharacter(character, true);                       
             InventoryUI.instance.SetInventory(character.Inventory);
         }
     }

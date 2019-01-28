@@ -18,7 +18,7 @@ namespace UNetGeneralChaos
         private void SetBehavioursToDisableForOthers(bool flag)
         {
             for (int i = 0; i < _disableBehaviours.Length; i++)
-                _disableBehaviours[i].enabled = flag;
+                if (_disableBehaviours[i] != null)  _disableBehaviours[i].enabled = flag;
         }
     }
 }

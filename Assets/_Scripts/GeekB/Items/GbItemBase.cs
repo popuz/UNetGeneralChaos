@@ -22,8 +22,7 @@ public class GbItemBase : MonoBehaviour
             if (item == collection.items[i])
                 return i;
 
-        if (item != null)
-            Debug.LogError("Items " + item.name + " not found in ItemBase!");
+        if (item != null) Debug.LogError("Items " + item.name + " not found in ItemBase!");
         return -1;
     }
 

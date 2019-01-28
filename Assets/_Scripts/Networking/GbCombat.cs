@@ -9,7 +9,6 @@ public class GbCombat : NetworkBehaviour
     private UnitStats myStats;
 
     public delegate void CombatDenegate();
-
     [SyncEvent] public event CombatDenegate EventOnAttack;
 
     private void Start() => myStats = GetComponent<UnitStats>();
@@ -20,6 +19,7 @@ public class GbCombat : NetworkBehaviour
     {        
         if (!(attackCooldown <= 0)) return false;
                 
+        Debug.Log(name + " attacks " + targetStats.gameObject.name);
         targetStats.TakeDamage(myStats.Damage.GetValue());
         EventOnAttack?.Invoke();
         attackCooldown = 1f / attackSpeed;

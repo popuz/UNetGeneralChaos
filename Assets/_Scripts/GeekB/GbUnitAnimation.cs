@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.AI;
 
 public class GbUnitAnimation : MonoBehaviour
@@ -16,5 +17,5 @@ public class GbUnitAnimation : MonoBehaviour
             _agent = GetComponentInParent<NavMeshAgent>();
     }
 
-    private void FixedUpdate() => _animator.SetBool(MoveTriggerHash, _agent.hasPath);
+    private void FixedUpdate() => _animator.SetBool(MoveTriggerHash, Math.Abs(_agent.velocity.magnitude) > float.Epsilon);
 }
