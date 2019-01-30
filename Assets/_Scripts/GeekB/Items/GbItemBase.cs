@@ -2,8 +2,8 @@
 
 public class GbItemBase : MonoBehaviour
 {
-    public static GbItemCollection collection;
-    [SerializeField] GbItemCollection collectionLink;
+    public static ItemCollection collection;
+    [SerializeField] ItemCollection collectionLink;
 
     private void Awake()
     {
@@ -16,7 +16,7 @@ public class GbItemBase : MonoBehaviour
         collection = collectionLink;
     }
 
-    public static int GetItemId(GbItem item)
+    public static int GetItemId(Item item)
     {
         for (int i = 0; i < collection.items.Length; i++)
             if (item == collection.items[i])
@@ -26,5 +26,5 @@ public class GbItemBase : MonoBehaviour
         return -1;
     }
 
-    public static GbItem GetItem(int id) => id == -1 ? null : collection.items[id];
+    public static Item GetItem(int id) => id == -1 ? null : collection.items[id];
 }

@@ -28,7 +28,7 @@ public class UnitMovement : MonoBehaviour
     
     public void MoveToPoint(Vector3 point) =>_agent.SetDestination(point);    
        
-    public void FollowTarget (GbInteractable newTarget) 
+    public void FollowTarget (Interactable newTarget) 
     {
         _agent.stoppingDistance = newTarget.radius;
         _target = newTarget.interactionCenter;

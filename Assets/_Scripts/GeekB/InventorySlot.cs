@@ -5,9 +5,9 @@ public class InventorySlot : MonoBehaviour
 {
     public Image icon;
     public Button removeButton; 
-    public GbInventory inventory; 
+    public Inventory inventory; 
 
-    GbItem item;
+    Item item;
 
     private void Awake()
     {
@@ -15,7 +15,7 @@ public class InventorySlot : MonoBehaviour
         this.GetComponent<Button>().onClick.AddListener(UseItem);
     }
 
-    public void SetItem(GbItem newItem)
+    public void SetItem(Item newItem)
     {
         item = newItem;
         icon.sprite = item.icon;
@@ -33,11 +33,13 @@ public class InventorySlot : MonoBehaviour
 
     private void OnRemoveButton()
     {
-        inventory.Remove(item);
+        inventory.DropItem(item);
     }
 
     private void UseItem()
     {
-        if (item != null) item.Use();
+        if (item != null ) inventory.UseItem(item);
     }
+    
+   
 }

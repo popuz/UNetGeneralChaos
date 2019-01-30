@@ -16,20 +16,23 @@
             <e p="CameraController.cs" t="Include" />
             <e p="Character.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
+            <e p="Equipment.cs" t="Include" />
+            <e p="EquipmentItem.cs" t="Include" />
             <e p="FollowerChildTest.cs" t="Include" />
-            <e p="GbInteractable.cs" t="Include" />
-            <e p="GbInventory.cs" t="Include" />
             <e p="GbSyncListItem.cs" t="Include" />
             <e p="GbUnitAnimation.cs" t="Include" />
             <e p="GbUnitTriggerAnimation.cs" t="Include" />
+            <e p="Interactable.cs" t="Include" />
+            <e p="Inventory.cs" t="Include" />
             <e p="InventorySlot.cs" t="Include" />
             <e p="InventoryUI.cs" t="Include" />
             <e p="Items" t="Include">
-              <e p="GbItem.cs" t="Include" />
               <e p="GbItemBase.cs" t="Include" />
-              <e p="GbItemCollection.cs" t="Include" />
-              <e p="GbItemPickup.cs" t="Include" />
+              <e p="Item.cs" t="Include" />
+              <e p="ItemCollection.cs" t="Include" />
+              <e p="ItemPickup.cs" t="Include" />
             </e>
+            <e p="Player.cs" t="Include" />
             <e p="Stat.cs" t="Include" />
             <e p="Unit.cs" t="Include" />
             <e p="UnitMovement.cs" t="Include" />

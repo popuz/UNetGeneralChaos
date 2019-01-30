@@ -8,6 +8,7 @@ namespace UNetGeneralChaos
     {
         [SerializeField] private GameObject _unitPrefab;
         [SerializeField] private NetPlayerController _controller;
+        [SerializeField] Player player;
 
         [SyncVar(hook = nameof(HookUnitIdentity))]
         private NetworkIdentity _unitIdentity;
@@ -18,39 +19,39 @@ namespace UNetGeneralChaos
         {
             if (isServer)
             {
-                Character character =  CreateCharacter();
+                Character character = CreateCharacter();
+                player.Setup(character, GetComponent<Inventory>(), GetComponent<Equipment>(), true);
                 _controller.SetCharacter(character, true);
-                InventoryUI.instance.SetInventory(character.Inventory);
             }
             else CmdCreatePlayer();
         }
-        
-        [Command]
-        private void CmdCreatePlayer() =>  _controller.SetCharacter(CreateCharacter(), true);
 
-        private Character CreateCharacter()
+        [Command]
+        public void CmdCreatePlayer()
+        {
+            Character character = CreateCharacter();
+            player.Setup(character, GetComponent<Inventory>(), GetComponent<Equipment>(), false);
+            _controller.SetCharacter(character, false);
+        }
+
+        public Character CreateCharacter()
         {
             GameObject unit = Instantiate(_unitPrefab, transform.position, Quaternion.identity);
-            var character = unit.GetComponent<Character>();
-            
             NetworkServer.Spawn(unit);
-            _unitIdentity = unit.GetComponent<NetworkIdentity>();                       
-            character.SetInventory(GetComponent<GbInventory>());            
-
-            return character;
+            _unitIdentity = unit.GetComponent<NetworkIdentity>();
+            return unit.GetComponent<Character>();
         }
-  
+
         [ClientCallback]
-        private void HookUnitIdentity(NetworkIdentity unit)
+        void HookUnitIdentity(NetworkIdentity unit)
         {
-            if (!isLocalPlayer) return;
-
-            _unitIdentity = unit;
-            Character character = unit.GetComponent<Character>();
-
-            _controller.SetCharacter(character, true);
-            character.SetInventory(GetComponent<GbInventory>());
-            InventoryUI.instance.SetInventory(character.Inventory);
+            if (isLocalPlayer)
+            {
+                _unitIdentity = unit;
+                Character character = unit.GetComponent<Character>();
+                player.Setup(character, GetComponent<Inventory>(), GetComponent<Equipment>(), true);
+                _controller.SetCharacter(character, true);
+            }
         }
     }
 }

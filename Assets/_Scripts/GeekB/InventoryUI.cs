@@ -8,7 +8,7 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] Transform itemsParent;
     [SerializeField] InventorySlot slotPrefab;
 
-    GbInventory inventory;
+    Inventory inventory;
     InventorySlot[] slots;
 
     private void Awake()
@@ -28,7 +28,7 @@ public class InventoryUI : MonoBehaviour
             inventoryUI.SetActive(!inventoryUI.activeSelf);        
     }
     
-    public void SetInventory(GbInventory newInventory)
+    public void SetInventory(Inventory newInventory)
     {
         inventory = newInventory;
         inventory.onItemChanged += ItemChanged;
@@ -48,7 +48,7 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    private void ItemChanged(UnityEngine.Networking.SyncList<GbItem>.Operation op, int itemIndex)
+    private void ItemChanged(UnityEngine.Networking.SyncList<Item>.Operation op, int itemIndex)
     {
         for (var i = 0; i < slots.Length; i++)
         {

@@ -76,7 +76,7 @@ public class Enemy : Unit
 
         for (var i = 0; i < foundedCollidersAmount; i++)
         {
-            var intractable = colliders[i].GetComponent<GbInteractable>();
+            var intractable = colliders[i].GetComponent<Interactable>();
             if (intractable == null || !intractable.CanInteract) continue;
             SetFocus(intractable);
             break;
@@ -87,7 +87,7 @@ public class Enemy : Unit
     {
         if (!base.Interact(user)) return false;
 
-        SetFocus(user.GetComponent<GbInteractable>());
+        SetFocus(user.GetComponent<Interactable>());
         return true;
     }
 }

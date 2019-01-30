@@ -6,7 +6,7 @@ public class Character : Unit
 {
     [SerializeField] private GameObject _gfx;
     
-    public GbInventory Inventory;    
+    public Player player;     
 
     protected override void OnAliveUpdate()
     {
@@ -44,14 +44,7 @@ public class Character : Unit
         if (!_isDead)
             _unitMover.MoveToPoint(point);
     }
-      
-    public void SetInventory (GbInventory inventory)
-    {                
-        Inventory = inventory;
-        inventory.dropPoint = transform;
-    }
-    
-    public void SetNewFocus (GbInteractable newFocus) 
+    public void SetNewFocus (Interactable newFocus) 
     {
         if (!_isDead && newFocus.CanInteract) SetFocus(newFocus);        
     }

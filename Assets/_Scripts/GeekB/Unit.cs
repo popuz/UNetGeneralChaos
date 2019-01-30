@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
 
-public class Unit : GbInteractable
+public class Unit : Interactable
 {
     [SerializeField] protected UnitMovement _unitMover;
     [SerializeField] protected UnitStats _myStats;
 
     [SerializeField] protected float _reviveDelay = 15f;
 
-    protected GbInteractable _focus;
+    protected Interactable _focus;
 
     protected bool _isDead;
 
@@ -110,7 +110,7 @@ public class Unit : GbInteractable
         if (!isServer) Die();
     }
 
-    protected virtual void SetFocus(GbInteractable newFocus)
+    protected virtual void SetFocus(Interactable newFocus)
     {
         if (newFocus == _focus) return;
 

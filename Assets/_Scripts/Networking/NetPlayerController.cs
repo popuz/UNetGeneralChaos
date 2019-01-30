@@ -20,7 +20,7 @@ public class NetPlayerController : NetworkBehaviour
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(_cam.ScreenPointToRay(Input.mousePosition),
                 out var interactHit, 100f, ~(1 << LayerMask.NameToLayer("Player"))))
         {
-            GbInteractable interactable = interactHit.collider.GetComponent<GbInteractable>();
+            Interactable interactable = interactHit.collider.GetComponent<Interactable>();
             if (interactable != null)
                 CmdSetFocus(interactable.GetComponent<NetworkIdentity>());
         }
@@ -48,5 +48,5 @@ public class NetPlayerController : NetworkBehaviour
 
     [Command]
     public void CmdSetFocus(NetworkIdentity newFocus) =>
-        _character.SetNewFocus(newFocus.GetComponent<GbInteractable>());
+        _character.SetNewFocus(newFocus.GetComponent<Interactable>());
 }
