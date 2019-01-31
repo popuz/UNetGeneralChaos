@@ -118,6 +118,7 @@ MonoBehaviour:
   interactionCenter: {fileID: 7352341612667052145}
   radius: 2
   item: {fileID: 11400000, guid: a250b73a7ca0d2246a8a2df80aea2de8, type: 2}
+  lifetime: 2000
 --- !u!1001 &2667240358629938689
 PrefabInstance:
   m_ObjectHideFlags: 0

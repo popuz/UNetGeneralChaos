@@ -118,6 +118,7 @@ MonoBehaviour:
   interactionCenter: {fileID: 7352341612667052145}
   radius: 2
   item: {fileID: 11400000, guid: 2d7aa225849a0b84c8d436da0c13617d, type: 2}
+  lifetime: 20000
 --- !u!1001 &7352341613580156676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -185,6 +186,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1371627231856940, guid: f68f19ab55ee89d4bb00eaa083ab7849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1626024150292538, guid: f68f19ab55ee89d4bb00eaa083ab7849, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -193,15 +198,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1528166768396778, guid: f68f19ab55ee89d4bb00eaa083ab7849, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1371627231856940, guid: f68f19ab55ee89d4bb00eaa083ab7849, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1602860162634520, guid: f68f19ab55ee89d4bb00eaa083ab7849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528166768396778, guid: f68f19ab55ee89d4bb00eaa083ab7849, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}

@@ -18,6 +18,8 @@
             <e p="Enemy.cs" t="Include" />
             <e p="Equipment.cs" t="Include" />
             <e p="EquipmentItem.cs" t="Include" />
+            <e p="EquipmentSlot.cs" t="Include" />
+            <e p="EquipmentUI.cs" t="Include" />
             <e p="FollowerChildTest.cs" t="Include" />
             <e p="GbSyncListItem.cs" t="Include" />
             <e p="GbUnitAnimation.cs" t="Include" />
@@ -35,6 +37,7 @@
             <e p="Player.cs" t="Include" />
             <e p="Stat.cs" t="Include" />
             <e p="Unit.cs" t="Include" />
+            <e p="UnitDrop.cs" t="Include" />
             <e p="UnitMovement.cs" t="Include" />
           </e>
           <e p="Input" t="Include">

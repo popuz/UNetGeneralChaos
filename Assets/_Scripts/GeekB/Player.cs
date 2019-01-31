@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
         if (isLocalPlayer)
         {
             InventoryUI.instance.SetInventory(_inventory);
+            EquipmentUI.instance.SetEquipment(_equipment);
         }
     }
 }
