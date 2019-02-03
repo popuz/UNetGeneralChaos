@@ -20,7 +20,7 @@ public class GbCombat : NetworkBehaviour
         if (!(attackCooldown <= 0)) return false;
                 
         Debug.Log(name + " attacks " + targetStats.gameObject.name);
-        targetStats.TakeDamage(myStats.Damage.GetValue());
+        targetStats.TakeDamage(myStats.damage.GetValue());
         EventOnAttack?.Invoke();
         attackCooldown = 1f / attackSpeed;
         return true;

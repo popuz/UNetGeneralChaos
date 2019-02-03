@@ -1,9 +1,38 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 [System.Serializable]
 public class Stat
 {
-    [SerializeField] private int _baseValue;
+    public delegate void StatChanged(int value);
 
-    public int GetValue() =>_baseValue;    
+    public event StatChanged onStatChanged;
+
+    [SerializeField] private int _baseValue;
+    private List<int> modifiers = new List<int>();
+    
+    public void AddModifier(int modifier)
+    {
+        if (modifier != 0)
+        {
+            modifiers.Add(modifier);
+            onStatChanged?.Invoke(GetValue());
+        }
+    }
+
+    public void RemoveModifier(int modifier)
+    {
+        if (modifier != 0)
+        {
+            modifiers.Remove(modifier);
+            onStatChanged?.Invoke(GetValue());
+        }
+    }
+
+    public int GetValue()
+    {
+        int finalValue = _baseValue;
+        modifiers.ForEach(x => finalValue += x);
+        return finalValue;        
+    }
 }

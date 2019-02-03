@@ -854,7 +854,7 @@ MonoBehaviour:
   interactionCenter: {fileID: 6924649777446433698}
   radius: 2
   _unitMover: {fileID: 6924649777446433544}
-  _myStats: {fileID: 5671344831602247092}
+  _stats: {fileID: 5671344831602247092}
   _reviveDelay: 15
   _moveRadius: 10
   _minMoveDelay: 4
@@ -1002,6 +1002,10 @@ MonoBehaviour:
   _maxHealth: 60
   Damage:
     _baseValue: 10
+  armor:
+    _baseValue: 0
+  moveSpeed:
+    _baseValue: 4
 --- !u!114 &6924649777446433544
 MonoBehaviour:
   m_ObjectHideFlags: 0

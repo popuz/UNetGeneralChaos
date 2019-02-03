@@ -36,6 +36,8 @@
             </e>
             <e p="Player.cs" t="Include" />
             <e p="Stat.cs" t="Include" />
+            <e p="StatItem.cs" t="Include" />
+            <e p="StatsUI.cs" t="Include" />
             <e p="Unit.cs" t="Include" />
             <e p="UnitDrop.cs" t="Include" />
             <e p="UnitMovement.cs" t="Include" />
@@ -58,6 +60,7 @@
             <e p="NetPlayerSetup.cs" t="Include" />
             <e p="PlayerLoader.cs" t="Include" />
             <e p="PlayerStats.cs" t="Include" />
+            <e p="StatsManager.cs" t="Include" />
             <e p="UnitStats.cs" t="Include" />
           </e>
           <e p="PlayerController.cs" t="Include" />

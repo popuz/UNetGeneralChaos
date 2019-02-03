@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
+[RequireComponent(typeof(StatsManager), typeof(NetworkIdentity))]
 public class Player : MonoBehaviour
 {
+    [SerializeField] StatsManager _statsManager;
+
     [SerializeField] Character _character;
     [SerializeField] Inventory _inventory;
     [SerializeField] Equipment _equipment;
@@ -23,6 +27,12 @@ public class Player : MonoBehaviour
         {
             InventoryUI.instance.SetInventory(_inventory);
             EquipmentUI.instance.SetEquipment(_equipment);
+            StatsUI.instance.SetManager(_statsManager);
         }
+        
+        _statsManager = GetComponent<StatsManager>();
+        if (GetComponent<NetworkIdentity>().isServer)        
+            _character.stats.manager = _statsManager;        
     }
+
 }
