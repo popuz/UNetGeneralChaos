@@ -34,6 +34,8 @@
               <e p="ItemCollection.cs" t="Include" />
               <e p="ItemPickup.cs" t="Include" />
             </e>
+            <e p="LoginIU.cs" t="Include" />
+            <e p="MenuUI.cs" t="Include" />
             <e p="Player.cs" t="Include" />
             <e p="Stat.cs" t="Include" />
             <e p="StatItem.cs" t="Include" />
@@ -56,6 +58,7 @@
           <e p="Networking" t="Include">
             <e p="EnemyStats.cs" t="Include" />
             <e p="GbCombat.cs" t="Include" />
+            <e p="MyNetworkManager.cs" t="Include" />
             <e p="NetPlayerController.cs" t="Include" />
             <e p="NetPlayerSetup.cs" t="Include" />
             <e p="PlayerLoader.cs" t="Include" />
