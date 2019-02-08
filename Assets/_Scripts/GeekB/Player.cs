@@ -17,22 +17,23 @@ public class Player : MonoBehaviour
     public void Setup(Character character, Inventory inventory, Equipment equipment,
         bool isLocalPlayer)
     {
+        _statsManager = GetComponent<StatsManager>();
         _character = character;
         _inventory = inventory;
         _equipment = equipment;
         _character.player = this;
         _inventory.player = this;
         _equipment.player = this;
+        
+        if (GetComponent<NetworkIdentity>().isServer)        
+            _character.Stats.manager = _statsManager;     
+        
         if (isLocalPlayer)
         {
             InventoryUI.instance.SetInventory(_inventory);
             EquipmentUI.instance.SetEquipment(_equipment);
             StatsUI.instance.SetManager(_statsManager);
-        }
-        
-        _statsManager = GetComponent<StatsManager>();
-        if (GetComponent<NetworkIdentity>().isServer)        
-            _character.stats.manager = _statsManager;        
+        }          
     }
 
 }

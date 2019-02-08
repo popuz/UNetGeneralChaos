@@ -4,10 +4,12 @@
 public class EquipmentItem : Item
 {
     public EquipmentSlotType equipSlot;
+    
     public int damageModifier;
     public int armorModifier;
     public int speedModifier;
 
+    
     public override void Use(Player player)
     {
         player.inventory.RemoveItem(this);
@@ -20,19 +22,18 @@ public class EquipmentItem : Item
     {
         if (player != null)
         {
-            UnitStats stats = player.character.stats;
+            UnitStats stats = player.character.Stats;
             stats.damage.AddModifier(damageModifier);
             stats.armor.AddModifier(armorModifier);
             stats.moveSpeed.AddModifier(speedModifier);
         }
     }
 
-// вызывается при снятии предмета
     public virtual void Unequip(Player player)
     {
         if (player != null)
         {
-            UnitStats stats = player.character.stats;
+            UnitStats stats = player.character.Stats;
             stats.damage.RemoveModifier(damageModifier);
             stats.armor.RemoveModifier(armorModifier);
             stats.moveSpeed.RemoveModifier(speedModifier);

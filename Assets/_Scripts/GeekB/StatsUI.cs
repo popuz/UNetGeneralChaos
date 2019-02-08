@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class StatsUI : MonoBehaviour
 {
+    #region Singlton
     public static StatsUI instance;
-
     private void Awake()
     {
         if (instance != null)
@@ -15,14 +15,17 @@ public class StatsUI : MonoBehaviour
 
         instance = this;
     }
+    #endregion
 
     [SerializeField] GameObject statsUI;
     [SerializeField] StatItem damageStat;
     [SerializeField] StatItem armorStat;
     [SerializeField] StatItem moveSpeedStat;
 
-    StatsManager manager;
-
+    private StatsManager manager;
+    private int curDamage, curArmor, curMoveSpeed;
+    
+    
     void Start()
     {
         statsUI.SetActive(false);
@@ -47,8 +50,6 @@ public class StatsUI : MonoBehaviour
         CheckManagerChanges();
     }
     
-    int curDamage, curArmor, curMoveSpeed;
-
     private void CheckManagerChanges()
     {
         if (curDamage != manager.damage)

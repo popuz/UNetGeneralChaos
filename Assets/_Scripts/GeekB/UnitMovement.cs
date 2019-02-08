@@ -13,9 +13,8 @@ public class UnitMovement : MonoBehaviour
     private void Update()
     {
         if (_target == null) return;
-
-        if (Math.Abs(_agent.velocity.magnitude) < float.Epsilon) FaceTarget();
-
+        if (Math.Abs(_agent.velocity.magnitude) < float.Epsilon)
+            FaceTarget();
         _agent.SetDestination(_target.position);
     }
 

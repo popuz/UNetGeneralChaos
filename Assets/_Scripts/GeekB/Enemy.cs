@@ -12,7 +12,7 @@ public class Enemy : Unit
 
     [Header("Behaviour")] [SerializeField] private bool _isAggresive = false;
     [SerializeField] private float _viewDistance = 5f;
-
+       
     protected override void Start()
     {
         base.Start();

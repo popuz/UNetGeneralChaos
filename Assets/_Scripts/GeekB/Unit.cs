@@ -3,7 +3,7 @@ using UnityEngine.Networking;
 
 public class Unit : Interactable
 {
-    public UnitStats stats => _stats;
+    public UnitStats Stats => _stats;
     
     [SerializeField] protected UnitMovement _unitMover;
     [SerializeField] protected UnitStats _stats;        
@@ -104,7 +104,7 @@ public class Unit : Interactable
         if (!isServer) return;
         
         CanInteract = true;
-        _stats.SetHealthRate(1);
+        _stats.SetHealthByRate(1);
         EventOnRevive?.Invoke();
         RpcRevive();
     }

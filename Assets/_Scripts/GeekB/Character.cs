@@ -6,6 +6,7 @@ public class Character : Unit
 {
     [SerializeField] private GameObject _gfx;
     
+    public new PlayerStats Stats => _stats as PlayerStats;
     public Player player;     
 
     protected override void OnAliveUpdate()
