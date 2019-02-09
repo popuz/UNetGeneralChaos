@@ -13,7 +13,7 @@ public class Equipment : NetworkBehaviour
 
     private void ItemChanged(SyncList<Item>.Operation op, int itemIndex)
     {
-        onItemChanged(op, itemIndex);
+        onItemChanged?.Invoke(op, itemIndex);
     }
 
     public EquipmentItem EquipItem(EquipmentItem item)
@@ -45,7 +45,7 @@ public class Equipment : NetworkBehaviour
     {
         if (items[index] != null && player.inventory.AddItem(items[index]))
         {
-            (items[index] as EquipmentItem)?.Unequip(player);
+            ((EquipmentItem)items[index])?.Unequip(player);
             items.RemoveAt(index);
         }
     }

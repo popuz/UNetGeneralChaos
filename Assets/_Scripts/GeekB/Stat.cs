@@ -9,8 +9,26 @@ public class Stat
     public event StatChanged onStatChanged;
 
     [SerializeField] private int _baseValue;
+
     private List<int> modifiers = new List<int>();
-    
+
+    public int baseValue
+    {
+        get => _baseValue;
+        set
+        {
+            _baseValue = value;
+            onStatChanged?.Invoke(GetValue());
+        }
+    }
+
+    public int GetValue()
+    {
+        int finalValue = _baseValue;
+        modifiers.ForEach(x => finalValue += x);
+        return finalValue;
+    }
+
     public void AddModifier(int modifier)
     {
         if (modifier != 0)
@@ -27,12 +45,5 @@ public class Stat
             modifiers.Remove(modifier);
             onStatChanged?.Invoke(GetValue());
         }
-    }
-
-    public int GetValue()
-    {
-        int finalValue = _baseValue;
-        modifiers.ForEach(x => finalValue += x);
-        return finalValue;        
     }
 }

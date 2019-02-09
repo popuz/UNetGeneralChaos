@@ -1,7 +1,5 @@
 ﻿public class PlayerStats : UnitStats
 {
-    public new PlayerStats stats => stats as PlayerStats;
-
     StatsManager _manager;
 
     public StatsManager manager

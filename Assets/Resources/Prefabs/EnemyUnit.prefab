@@ -859,6 +859,7 @@ MonoBehaviour:
   _moveRadius: 10
   _minMoveDelay: 4
   _maxMoveDelay: 12
+  rewardExp: 80
   _isAggresive: 1
   _viewDistance: 5
 --- !u!114 &6924649777446433766
@@ -1000,8 +1001,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 60
-  Damage:
-    _baseValue: 10
+  damage:
+    _baseValue: 0
   armor:
     _baseValue: 0
   moveSpeed:

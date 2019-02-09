@@ -3,12 +3,12 @@ using UnityEngine.Networking;
 
 public class Unit : Interactable
 {
-    public UnitStats stats => _stats;
-    
+    public UnitStats Stats => _stats;
+
     [SerializeField] protected UnitMovement _unitMover;
-    [SerializeField] protected UnitStats _stats;        
+    [SerializeField] protected UnitStats _stats;
     [SerializeField] protected float _reviveDelay = 15f;
-    
+
     protected Interactable _focus;
 
     protected bool _isDead;
@@ -17,18 +17,19 @@ public class Unit : Interactable
     private float _reviveTime;
 
     public delegate void UnitDenegate();
+
     [SyncEvent] public event UnitDenegate EventOnDamage;
     [SyncEvent] public event UnitDenegate EventOnDie;
     [SyncEvent] public event UnitDenegate EventOnRevive;
 
-    
-    public override void OnStartServer ()
-    {        
+
+    public override void OnStartServer()
+    {
         if (_unitMover == null) return;
         _unitMover.SetMoveSpeed(_stats.moveSpeed.GetValue());
         _stats.moveSpeed.onStatChanged += _unitMover.SetMoveSpeed;
     }
-    
+
     protected virtual void Start()
     {
         _startPos = transform.position;
@@ -44,10 +45,17 @@ public class Unit : Interactable
 
         if (combat != null)
         {
-            if (combat.Attack(_stats)) EventOnDamage?.Invoke();            
+            if (combat.Attack(_stats))
+                DamageWithCombat(user);
             return true;
-        }                        
+        }
+
         return base.Interact(user);
+    }
+
+    protected virtual void DamageWithCombat(GameObject user)
+    {
+        EventOnDamage?.Invoke();
     }
 
     private void OnUpdate()
@@ -86,9 +94,9 @@ public class Unit : Interactable
     protected virtual void Die()
     {
         _isDead = true;
-        GetComponent<Collider>().enabled = false ;
+        GetComponent<Collider>().enabled = false;
         if (!isServer) return;
-               
+
         CanInteract = false;
         RemoveFocus();
         _unitMover.MoveToPoint(transform.position);
@@ -100,11 +108,11 @@ public class Unit : Interactable
     protected virtual void Revive()
     {
         _isDead = false;
-        GetComponent<Collider>().enabled = true ;
+        GetComponent<Collider>().enabled = true;
         if (!isServer) return;
-        
+
         CanInteract = true;
-        _stats.SetHealthRate(1);
+        _stats.SetHealthByRate(1);
         EventOnRevive?.Invoke();
         RpcRevive();
     }

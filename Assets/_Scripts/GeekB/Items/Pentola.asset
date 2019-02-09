@@ -16,7 +16,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 40009236ab8caa04db53ccb2ad2c39c3, type: 3}
   pickupPrefab: {fileID: 7352341612667052044, guid: fb65c65c737bc544ea7839cb95301f57,
     type: 3}
-  equipSlot: 1
-  damageModifier: 0
-  armorModifier: 500
-  speedModifier: 0
+  equipSlot: 2
+  damageModifier: 5
+  armorModifier: 0
+  speedModifier: 500
