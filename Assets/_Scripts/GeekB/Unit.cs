@@ -18,10 +18,9 @@ public class Unit : Interactable
 
     public delegate void UnitDenegate();
 
-    [SyncEvent] public event UnitDenegate EventOnDamage;
-    [SyncEvent] public event UnitDenegate EventOnDie;
-    [SyncEvent] public event UnitDenegate EventOnRevive;
-
+    public event UnitDenegate EventOnDamage;
+    public event UnitDenegate EventOnDie;
+    public event UnitDenegate EventOnRevive;
 
     public override void OnStartServer()
     {
@@ -94,13 +93,15 @@ public class Unit : Interactable
     protected virtual void Die()
     {
         _isDead = true;
-        GetComponent<Collider>().enabled = false;
+        GetComponent<Collider>().enabled = false;        
+        EventOnDie?.Invoke();
+        
         if (!isServer) return;
 
         CanInteract = false;
         RemoveFocus();
         _unitMover.MoveToPoint(transform.position);
-        EventOnDie?.Invoke();
+        
         RpcDie();
     }
 
@@ -109,11 +110,12 @@ public class Unit : Interactable
     {
         _isDead = false;
         GetComponent<Collider>().enabled = true;
+        EventOnRevive?.Invoke();
+        
         if (!isServer) return;
-
         CanInteract = true;
         _stats.SetHealthByRate(1);
-        EventOnRevive?.Invoke();
+        
         RpcRevive();
     }
 
