@@ -88,6 +88,8 @@
               <e p="ItemCollection.cs" t="Include" />
               <e p="ItemPickup.cs" t="Include" />
             </e>
+            <e p="LoginUI.cs" t="Include" />
+            <e p="MenuUI.cs" t="Include" />
             <e p="Player.cs" t="Include" />
             <e p="PlayerProgress.cs" t="Include" />
             <e p="Stat.cs" t="Include" />
@@ -111,6 +113,7 @@
           <e p="Networking" t="Include">
             <e p="EnemyStats.cs" t="Include" />
             <e p="GbCombat.cs" t="Include" />
+            <e p="MyNetworkManager.cs" t="Include" />
             <e p="NetPlayerController.cs" t="Include" />
             <e p="NetPlayerSetup.cs" t="Include" />
             <e p="PlayerLoader.cs" t="Include" />
@@ -120,6 +123,26 @@
           </e>
           <e p="PlayerController.cs" t="Include" />
           <e p="UnitAnimation.cs" t="Include" />
+        </e>
+        <e p="Database Control Free" t="Include">
+          <e p="Demos" t="Include">
+            <e p="C#" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="DCF_DemoScene_ManagerScript_CSharp.cs" t="Include" />
+              </e>
+            </e>
+            <e p="UnityScript" t="Include">
+              <e p="Readme.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Resources" t="Include">
+            <e p="DCF_RuntimeData.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Editor Default Resources" t="Include">
+          <e p="Database Control Free" t="Include">
+            <e p="DCF_EditorData.txt" t="Include" />
+          </e>
         </e>
         <e p="UnitTests" t="Include">
           <e p="Editor" t="Include">
