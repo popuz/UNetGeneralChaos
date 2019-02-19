@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GbItemBase : MonoBehaviour
+public class ItemBase : MonoBehaviour
 {
     public static ItemCollection collection;
     [SerializeField] ItemCollection collectionLink;

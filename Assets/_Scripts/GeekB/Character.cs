@@ -5,15 +5,30 @@ using UNetGeneralChaos;
 public class Character : Unit
 {
     [SerializeField] private GameObject _gfx;
-    
-    public new PlayerStats Stats => _stats as PlayerStats;
-    public Player player;     
+
+    public new PlayerStats Stats => stats as PlayerStats;
+    public Player player;
+
+    void Start()
+    {
+        _startPos = Vector3.zero;
+        _reviveTime = _reviveDelay;
+        if (stats.curHealth == 0)
+        {
+            transform.position = _startPos;
+            if (isServer)
+            {
+                Stats.SetHealthByRate(1);                
+                _unitMover.MoveToPoint(_startPos);
+            }
+        }
+    }
 
     protected override void OnAliveUpdate()
     {
-        base.OnAliveUpdate();        
+        base.OnAliveUpdate();
         if (_focus == null) return;
-                        
+
         if (!_focus.CanInteract)
         {
             RemoveFocus();
@@ -21,9 +36,8 @@ public class Character : Unit
         else
         {
             var distance = Vector3.Distance(_focus.interactionCenter.position, transform.position);
-            if (distance <= _focus.radius && !_focus.Interact(gameObject)) RemoveFocus();            
+            if (distance <= _focus.radius && !_focus.Interact(gameObject)) RemoveFocus();
         }
-        
     }
 
     protected override void Die()
@@ -45,8 +59,9 @@ public class Character : Unit
         if (!_isDead)
             _unitMover.MoveToPoint(point);
     }
-    public void SetNewFocus (Interactable newFocus) 
+
+    public void SetNewFocus(Interactable newFocus)
     {
-        if (!_isDead && newFocus.CanInteract) SetFocus(newFocus);        
+        if (!_isDead && newFocus.CanInteract) SetFocus(newFocus);
     }
 }

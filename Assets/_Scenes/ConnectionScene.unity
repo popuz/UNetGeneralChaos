@@ -3171,7 +3171,7 @@ MonoBehaviour:
   matchSize: 4
   isNetworkActive: 0
   matchMaker: {fileID: 0}
-  serverMode: 1
+  serverMode: 0
 --- !u!1 &2141150252
 GameObject:
   m_ObjectHideFlags: 0
