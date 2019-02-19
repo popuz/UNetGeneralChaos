@@ -67,6 +67,7 @@
             <e p="TrapBehaviour.cs" t="Include" />
           </e>
           <e p="GeekB" t="Include">
+            <e p="AccountManager.cs" t="Include" />
             <e p="CameraController.cs" t="Include" />
             <e p="Character.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
@@ -83,8 +84,8 @@
             <e p="InventorySlot.cs" t="Include" />
             <e p="InventoryUI.cs" t="Include" />
             <e p="Items" t="Include">
-              <e p="GbItemBase.cs" t="Include" />
               <e p="Item.cs" t="Include" />
+              <e p="ItemBase.cs" t="Include" />
               <e p="ItemCollection.cs" t="Include" />
               <e p="ItemPickup.cs" t="Include" />
             </e>
@@ -98,6 +99,8 @@
             <e p="Unit.cs" t="Include" />
             <e p="UnitDrop.cs" t="Include" />
             <e p="UnitMovement.cs" t="Include" />
+            <e p="UserAccount.cs" t="Include" />
+            <e p="UserData.cs" t="Include" />
           </e>
           <e p="Input" t="Include">
             <e p="ClickToMoveInputScheme.cs" t="Include" />

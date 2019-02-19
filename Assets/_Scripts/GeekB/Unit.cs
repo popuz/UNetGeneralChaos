@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Serialization;
 
 public class Unit : Interactable
 {
-    public UnitStats Stats => _stats;
+    public UnitStats Stats => stats;
 
     [SerializeField] protected UnitMovement _unitMover;
-    [SerializeField] protected UnitStats _stats;
+    [SerializeField] protected UnitStats stats;
     [SerializeField] protected float _reviveDelay = 15f;
 
     protected Interactable _focus;
@@ -14,7 +15,7 @@ public class Unit : Interactable
     protected bool _isDead;
 
     protected Vector3 _startPos;
-    private float _reviveTime;
+    protected float _reviveTime;
 
     public delegate void UnitDenegate();
 
@@ -25,8 +26,8 @@ public class Unit : Interactable
     public override void OnStartServer()
     {
         if (_unitMover == null) return;
-        _unitMover.SetMoveSpeed(_stats.moveSpeed.GetValue());
-        _stats.moveSpeed.onStatChanged += _unitMover.SetMoveSpeed;
+        _unitMover.SetMoveSpeed(stats.moveSpeed.GetValue());
+        stats.moveSpeed.onStatChanged += _unitMover.SetMoveSpeed;
     }
 
     protected virtual void Start()
@@ -44,7 +45,7 @@ public class Unit : Interactable
 
         if (combat != null)
         {
-            if (combat.Attack(_stats))
+            if (combat.Attack(stats))
                 DamageWithCombat(user);
             return true;
         }
@@ -63,7 +64,7 @@ public class Unit : Interactable
 
         if (!_isDead)
         {
-            if (_stats != null && _stats.CurHealth == 0) Die();
+            if (stats != null && stats.curHealth == 0) Die();
             else OnAliveUpdate();
         }
         else
@@ -114,7 +115,7 @@ public class Unit : Interactable
         
         if (!isServer) return;
         CanInteract = true;
-        _stats.SetHealthByRate(1);
+        stats.SetHealthByRate(1);
         
         RpcRevive();
     }

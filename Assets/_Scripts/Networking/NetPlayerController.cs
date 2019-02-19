@@ -30,10 +30,10 @@ public class NetPlayerController : NetworkBehaviour
             CmdSetMovePoint(moveHit.point);
     }
 
-    private void OnDestroy()
-    {
-        if (_character != null) Destroy(_character.gameObject);
-    }
+//    private void OnDestroy()
+//    {
+//        if (_character != null) Destroy(_character.gameObject);
+//    }
 
     public void SetCharacter(Character character, bool IsLocalPlayer)
     {

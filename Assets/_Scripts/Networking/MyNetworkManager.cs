@@ -57,22 +57,19 @@ public class MyNetworkManager : NetworkManager
 
     IEnumerator LoginUser(NetworkMessage netMsg)
     {
-        UserMessage msg = netMsg.ReadMessage<UserMessage>();
-        IEnumerator e = DCF.Login(msg.login, msg.pass);
+        UserMessage msg = netMsg.ReadMessage<UserMessage>();                
+        UserAccount account = new UserAccount(netMsg.conn);
+        IEnumerator e = account.Login(msg.login, msg.pass);
+        
         while (e.MoveNext())
             yield return e.Current;
 
         string response = e.Current as string;
+
         if (response == "Success")
-        {
-            Debug.Log("server login success");
             netMsg.conn.Send(MsgType.Scene, new StringMessage(SceneManager.GetActiveScene().name));
-        }
         else
-        {
-            Debug.Log("server login fail");
             netMsg.conn.Send(MsgType.Highest + (short) NetMsgType.Login, new StringMessage(response));
-        }
     }
 
     IEnumerator RegisterUser(NetworkMessage netMsg)
